@@ -1,1 +1,0 @@
-# clarkngo.github.io
