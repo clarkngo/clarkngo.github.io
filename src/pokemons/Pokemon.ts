@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface Pokemon {
-    id?: string;
+    id?: number;
     name?: Name ;
     type?: string[]; 
     base?: Base;
@@ -15,12 +15,12 @@ export interface Name {
 }
 
 export interface Base {
-    HP: string;
-    Attack: string;
-    Defense: string;
-    "Sp. Attack": string;
-    "Sp. Defense": string;
-    Speed?: string;
+    HP: number;
+    Attack: number;
+    Defense: number;
+    "Sp. Attack": number;
+    "Sp. Defense": number;
+    Speed?: number;
 }
 
 export let TYPES = {

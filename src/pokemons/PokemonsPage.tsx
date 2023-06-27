@@ -1,7 +1,8 @@
-import React from "react";
-import pokemon from './MockPokemons';
+import React, { useEffect, useState } from 'react';
 import { Table, Tag } from 'antd';
-import { Name, Base } from './Pokemon';
+import { Name, Base, Pokemon } from './Pokemon';
+import pokemonJsonData from '../data/pokemons.json';
+
 
 const TYPES: {[key: string] : string} = {
     'Normal': '#A8A77A',
@@ -86,11 +87,26 @@ const columns = [
     },
   ];
 function PokemonsPage() {
+    const [pokemonData, setPokemonData] = useState<Pokemon[]>([]);
+
+    useEffect(() => {
+        setPokemonData(pokemonJsonData);
+      }, []);
+
+    useEffect(() => {
+      fetch('../data/pokemons.json')
+        .then(response => response.json())
+        .then(data => setPokemonData(data))
+        .catch(error => {
+          console.error('Error loading JSON:', error);
+        });
+    }, []);
+    
     return (
         <>        
             <h1>Pokemons</h1>
             {/* <PokemonList pokemons={pokemon} /> */}
-            <Table dataSource={pokemon} columns={columns} rowKey="id"/>
+            <Table dataSource={pokemonData} columns={columns} rowKey="id"/>
         </>
     );
 }
