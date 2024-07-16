@@ -1,5 +1,13 @@
 [
   {
+    "text": "Chart",
+    "href": "/chart"
+  },
+  {
+    "text": "Path",
+    "href": "/path"
+  },
+  {
     "text": "Pokedex",
     "href": "/pokedex"
   },
