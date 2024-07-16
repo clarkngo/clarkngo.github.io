@@ -8,6 +8,7 @@ import ProjectsPage from "./projects/ProjectsPage";
 import "./index.css";
 import PathPage from "./path/PathPage";
 import ChartPage from "./chart/ChartPage";
+import NotesPage from "./notes/NotesPage";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="path" element={<PathPage/>} />
           <Route path="pokedex" element={<PokemonsPage />} />
           <Route path="project" element={<ProjectsPage />} />
+          <Route path="notes" element={<NotesPage />} />
         </Route>
       </Routes>
     </HashRouter>
