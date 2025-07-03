@@ -25,6 +25,11 @@ redirect_from:
       width: 70%;
     }
   }
+  .sidebar, .author__content, .author__bio, .author__urls {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
 </style>
 
 {% include cv-template.html %}
