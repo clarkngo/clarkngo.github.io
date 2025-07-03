@@ -1,0 +1,2 @@
+Limit code changes to the minimum
+Avoid auto commit and push to GitHub
