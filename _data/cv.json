@@ -4,13 +4,13 @@
     "email": "clarkjasonngo@yahoo.com",
     "phone": "",
     "website": "https://clarkngo.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "summary": "AI Software Engineer at City University of Seattle. Passionate about building robust, user-focused solutions in AI, cloud, and full-stack development.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Seattle",
       "countryCode": "US",
-      "region": ""
+      "region": "Washington"
     },
     "profiles": [
       {
@@ -138,29 +138,29 @@
   ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "institution": "City University of Seattle",
+      "area": "Master of Business Administration",
+      "studyType": "MBA",
+      "startDate": "2024-01",
+      "endDate": "Present",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
+      "institution": "City University of Seattle",
+      "area": "Master of Science in Computer Science",
+      "studyType": "MSCS",
+      "startDate": "2017-06",
+      "endDate": "2020-03",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "institution": "De La Salle University",
+      "area": "Bachelor of Science in Commerce, Major in Management of Financial Institutions",
+      "studyType": "BS Commerce",
+      "startDate": "2007-05",
+      "endDate": "2010-04",
       "gpa": null,
       "courses": []
     }
@@ -252,6 +252,28 @@
       "date": "",
       "url": "",
       "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "2020-12"
+    },
+    {
+      "name": "CompTIA Linux+ ce Certification",
+      "issuer": "CompTIA",
+      "date": "2020-04"
+    },
+    {
+      "name": "Software Engineering",
+      "issuer": "The Firehose Project",
+      "date": "2019"
+    },
+    {
+      "name": "Ableton Specialist",
+      "issuer": "Berklee College of Music",
+      "date": "2016"
     }
   ]
 }
