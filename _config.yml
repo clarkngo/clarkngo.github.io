@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "Clark Ngo | AI Engineer"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Clark Ngo"
 description              : &description "personal description"
 url                      : https://clarkngo.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,18 +23,18 @@ repository               : "clarkngo/clarkngo.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  name             : "Clark Ngo"
+  pronouns         : # example: "he/him"  
+  bio              : "AI Software Engineer at City University of Seattle. Passionate about building robust, user-focused solutions in AI, cloud, and full-stack development."
+  location         : "Seattle, Washington, US"
+  employer         : "City University of Seattle"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "clarkjasonngo@yahoo.com"
+  academia         : "ngoclarkjason@cityuniversity.edu"
 
   # Academic websites
-  academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=m5MIf0AAAAAJ&hl=en"
   impactstory      : # URL
   orcid            : "http://orcid.org/yourorcidurl"
   semantic         : # URL
