@@ -2,8 +2,8 @@
 layout: post
 title: "Understanding MCP Stdio Transport: Beyond HTTP APIs"
 date: 2025-07-08
-categories: [development, mcp, apis]
-tags: [mcp, stdio, transport, apis, backend]
+permalink: /posts/2025/07/understanding-mcp-stdio-transport/
+tags: [development, mcp, apis, stdio, transport, backend]
 ---
 
 If you're familiar with building HTTP APIs, you might be curious about how MCP (Model Context Protocol) servers work, especially when using stdio transport. Let me break this down using your existing API knowledge as a foundation.

@@ -2,13 +2,17 @@
 title: "Blog"
 permalink: /blog/
 layout: archive
+author_profile: true
 ---
 
-Welcome to my Blog! Here you'll find:
+Welcome to my Blog!
 
-- [Short Form](/blog/short-form/): Quick thoughts, tips, and updates
-- [Long Form](/blog/long-form/): In-depth essays and tutorials
-- [Books](/blog/books/): Book recommendations and reviews
-- [Media Reviews](/blog/media/): Movie, series, and anime reviews
+{% include tag-list.html %}
 
-Browse by [Categories](/categories/) or [Tags](/tags/) for more! 
+## Recent Posts
+
+{% for post in site.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+[Browse all posts by tag](/tags/) 
