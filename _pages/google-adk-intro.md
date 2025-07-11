@@ -80,27 +80,132 @@ permalink: /presentations/google-adk-intro/
 
 <!-- ──────────────────────────── -->
 <section>
-  <h2>Live&nbsp;Demo</h2>
-  <p>Let’s build & run our first Google ADK agent.</p>
-  <p><em>(Switching to GitHub Codespace…)</em></p>
+  <h2>Features</h2>
+  <img src="/images/events_events.png"
+       alt="ADK agent Events Events"
+       style="max-width: 90%; height: auto; border: 2px solid #ccc; border-radius: 8px;" />
+  <aside class="notes">
+    Walk the audience through the arrows—from browser → Codespace → ADK host → Google Cloud → Gemini—while pointing to each section on the image.
+  </aside>
 </section>
 
 <!-- ──────────────────────────── -->
 <section>
-  <h2>Getting Started</h2>
-  <pre><code class="python">
-# Minimal ADK agent example
-from google.cloud import adk
-
-def create_basic_agent():
-    agent = adk.Agent()
-    agent.add_capability("chat")
-    return agent
-
-# Boom! Your first ADK agent is ready
-  </code></pre>
-  <p>It really is that simple.</p>
+  <h2>Features</h2>
+  <img src="/images/events_diagram.png"
+       alt="ADK agent Events Diagram"
+       style="max-width: 90%; height: auto; border: 2px solid #ccc; border-radius: 8px;" />
+  <aside class="notes">
+    Walk the audience through the arrows—from browser → Codespace → ADK host → Google Cloud → Gemini—while pointing to each section on the image.
+  </aside>
 </section>
+
+<!-- ──────────────────────────── -->
+<section>
+  <h2>Features</h2>
+  <img src="/images/events_trace.png"
+       alt="ADK agent Events Trace"
+       style="max-width: 90%; height: auto; border: 2px solid #ccc; border-radius: 8px;" />
+  <aside class="notes">
+    Walk the audience through the arrows—from browser → Codespace → ADK host → Google Cloud → Gemini—while pointing to each section on the image.
+  </aside>
+</section>
+
+
+<!-- ──────────────────────────── -->
+<<!-- ── Getting Started ① ── -->
+<section>
+  <h2>Getting Started (1/3)</h2>
+  <p>Imports & helper libraries</p>
+  <pre><code class="python" data-line-numbers>
+import datetime
+from zoneinfo import ZoneInfo
+from google.adk.agents import Agent
+  </code></pre>
+  <aside class="notes">
+    • <code>ZoneInfo</code> for timezone‑aware timestamps.  
+    • <code>Agent</code> comes directly from <code>google.adk.agents</code>.
+  </aside>
+</section>
+
+<!-- ── Getting Started ② ── -->
+<section>
+  <h2>Getting Started (2/3)</h2>
+  <p>Define your <em>tool functions</em></p>
+  <pre><code class="python" data-line-numbers="3-19|22-40">
+def get_weather(city: str) -> dict:
+    """Return a mock weather report."""
+    if city.lower() == "new york":
+        return {
+            "status": "success",
+            "report": (
+                "The weather in New York is sunny, 25 °C "
+                "(77 °F)."
+            ),
+        }
+    return {
+        "status": "error",
+        "error_message": f"No weather data for '{city}'.",
+    }
+
+def get_current_time(city: str) -> dict:
+    """Return the current time in the requested city."""
+    if city.lower() != "new york":
+        return {
+            "status": "error",
+            "error_message": (
+                f"Sorry, I don't have timezone info for {city}."
+            ),
+        }
+    tz = ZoneInfo("America/New_York")
+    now = datetime.datetime.now(tz)
+    return {
+        "status": "success",
+        "report": (
+            f"The current time in {city} is "
+            f"{now:%Y-%m-%d %H:%M:%S %Z%z}"
+        ),
+    }
+  </code></pre>
+  <aside class="notes">
+    Each tool returns a dict with <code>status</code> and either
+    <code>report</code> or <code>error_message</code>—exactly what ADK expects.
+  </aside>
+</section>
+
+<!-- ── Getting Started ③ ── -->
+<section>
+  <h2>Getting Started (3/3)</h2>
+  <p>Create the <strong>root agent</strong></p>
+  <pre><code class="python" data-line-numbers>
+root_agent = Agent(
+    name="weather_time_agent",
+    model="gemini-2.5-flash",
+    description=(
+        "Agent that answers questions about time "
+        "and weather in a city."
+    ),
+    instruction=(
+        "You are a helpful agent who can answer user "
+        "questions about the time and weather."
+    ),
+    tools=[get_weather, get_current_time],
+)
+  </code></pre>
+  <aside class="notes">
+    • Attach the two tools.<br>
+    • Swap <code>model</code> to <code>gemini-live-2.5-flash-preview</code> for voice.  
+    • That’s a fully functioning ADK agent!
+  </aside>
+</section>
+
+<!-- ── Live Demo (last slide before Q&A) ── -->
+<section>
+  <h2>Live Demo</h2>
+  <p>Let’s run <code>root_agent.ask("What’s the weather in New York?")</code>!</p>
+  <p><em>(Opening Codespace…)</em></p>
+</section>
+
 
 <!-- ──────────────────────────── -->
 <section>
@@ -114,6 +219,19 @@ def create_basic_agent():
   <p>Start small → scale as your needs grow.</p>
 </section>
 
+
+<!-- ──────────────────────────── -->
+<section>
+  <h2>References</h2>
+  <div class="contact">
+    <ul>
+      <li><a href="https://google.github.io/adk-docs/">Google ADK Docs</a></li>
+      <li><a href="https://github.com/bhancockio/agent-development-kit-crash-course/">Agent Development Kit Crash Course</a></li>
+    </ul>
+  </div>
+</section>
+
+
 <!-- ──────────────────────────── -->
 <section>
   <h2>Thank You!</h2>
@@ -121,9 +239,8 @@ def create_basic_agent():
   <div class="contact">
     <p>Find me on:</p>
     <ul>
-      <li><a href="https://github.com/your‑handle">GitHub</a></li>
-      <li><a href="https://linkedin.com/in/your‑handle">LinkedIn</a></li>
-      <li><a href="https://twitter.com/your‑handle">Twitter</a></li>
+      <li><a href="https://github.com/clarkngo">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/clarkngo">LinkedIn</a></li>
     </ul>
   </div>
 </section>
