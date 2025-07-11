@@ -41,6 +41,98 @@ permalink: /presentations/google-adk-intro/
   </aside>
 </section>
 
+<section>
+  <h2>What is Agent Development Kit? (From Official Google ADK) </h2>
+  <p>
+    Agent Development Kit (ADK) is a flexible and modular framework for developing and deploying AI agents. While optimized for Gemini and the Google ecosystem, ADK is model-agnostic, deployment-agnostic, and is built for compatibility with other frameworks. ADK was designed to make agent development feel more like software development, to make it easier for developers to create, deploy, and orchestrate agentic architectures that range from simple tasks to complex workflows.
+  </p>
+  <aside class="notes">
+    Read the official Google ADK description aloud.  
+    Then move on to explain the key terms in detail in following slides.
+  </aside>
+</section>
+
+<section>
+  <h2>Flexible and Modular Framework</h2>
+  <ul>
+    <li><strong>Flexible:</strong> Adaptable to different use cases, from simple to complex AI tasks.</li>
+    <li><strong>Modular:</strong> Built with interchangeable components, so developers can swap or reuse parts.</li>
+  </ul>
+  <aside class="notes">
+    Explain that flexibility means it suits many needs and modularity means easy to customize and extend.
+  </aside>
+</section>
+
+<section>
+  <h2>Developing and Deploying AI Agents</h2>
+  <ul>
+    <li><strong>Developing:</strong> Writing the logic and capabilities of AI agents.</li>
+    <li><strong>Deploying:</strong> Running those agents reliably in different environments like cloud or local machines.</li>
+  </ul>
+  <aside class="notes">
+    Highlight the full lifecycle: from coding the agent to making it run where needed.
+  </aside>
+</section>
+
+<section>
+  <h2>Optimized for Gemini and Google Ecosystem</h2>
+  <p>
+    Designed to work especially well with Google’s Gemini model and tools like Google Cloud.
+  </p>
+  <aside class="notes">
+    Mention the special integration and optimization with Google’s AI infrastructure.
+  </aside>
+</section>
+
+<section>
+  <h2>Model-Agnostic</h2>
+  <p>
+    Can work with other AI models besides Gemini, like OpenAI’s GPT or Anthropic’s Claude.
+  </p>
+  <aside class="notes">
+    Emphasize flexibility in choice of AI models.
+  </aside>
+</section>
+
+<section>
+  <h2>Deployment-Agnostic</h2>
+  <p>
+    Not tied to any specific platform—you can deploy agents on the cloud, locally, or in apps.
+  </p>
+  <aside class="notes">
+    Stress freedom to run agents wherever fits your project best.
+  </aside>
+</section>
+
+<section>
+  <h2>Compatible with Other Frameworks</h2>
+  <p>
+    Easily integrates with other tools and AI frameworks, like LangChain or React frontends.
+  </p>
+  <aside class="notes">
+    Show it plays well with existing development ecosystems.
+  </aside>
+</section>
+
+<section>
+  <h2>Feels Like Software Development</h2>
+  <p>
+    Designed so building agents is like building software—structured, testable, and maintainable.
+  </p>
+  <aside class="notes">
+    Reinforce the familiar software engineering workflow for AI agent development.
+  </aside>
+</section>
+
+<section>
+  <h2>Supports Simple to Complex Architectures</h2>
+  <p>
+    From basic chatbots to multi-agent workflows handling complex tasks.
+  </p>
+  <aside class="notes">
+    End by highlighting ADK’s scalability for any project size.
+  </aside>
+</section>
 <!-- ──────────────────────────── -->
 <section>
   <h2>System Overview</h2>
@@ -81,7 +173,7 @@ permalink: /presentations/google-adk-intro/
 <!-- ──────────────────────────── -->
 <section>
   <h2>Features</h2>
-  <img src="/images/events_events.png"
+  <img src="/images/adk_events_events.png"
        alt="ADK agent Events Events"
        style="max-width: 90%; height: auto; border: 2px solid #ccc; border-radius: 8px;" />
   <aside class="notes">
@@ -92,7 +184,7 @@ permalink: /presentations/google-adk-intro/
 <!-- ──────────────────────────── -->
 <section>
   <h2>Features</h2>
-  <img src="/images/events_diagram.png"
+  <img src="/images/adk_events_diagram.png"
        alt="ADK agent Events Diagram"
        style="max-width: 90%; height: auto; border: 2px solid #ccc; border-radius: 8px;" />
   <aside class="notes">
@@ -103,7 +195,7 @@ permalink: /presentations/google-adk-intro/
 <!-- ──────────────────────────── -->
 <section>
   <h2>Features</h2>
-  <img src="/images/events_trace.png"
+  <img src="/images/adk_events_trace.png"
        alt="ADK agent Events Trace"
        style="max-width: 90%; height: auto; border: 2px solid #ccc; border-radius: 8px;" />
   <aside class="notes">
@@ -113,7 +205,6 @@ permalink: /presentations/google-adk-intro/
 
 
 <!-- ──────────────────────────── -->
-<<!-- ── Getting Started ① ── -->
 <section>
   <h2>Getting Started (1/3)</h2>
   <p>Imports & helper libraries</p>
@@ -128,7 +219,7 @@ from google.adk.agents import Agent
   </aside>
 </section>
 
-<!-- ── Getting Started ② ── -->
+<!-- ──────────────────────────── -->
 <section>
   <h2>Getting Started (2/3)</h2>
   <p>Define your <em>tool functions</em></p>
@@ -173,7 +264,7 @@ def get_current_time(city: str) -> dict:
   </aside>
 </section>
 
-<!-- ── Getting Started ③ ── -->
+<!-- ──────────────────────────── -->
 <section>
   <h2>Getting Started (3/3)</h2>
   <p>Create the <strong>root agent</strong></p>
