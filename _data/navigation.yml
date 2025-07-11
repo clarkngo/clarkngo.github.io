@@ -20,6 +20,9 @@ main:
   - title: "Projects"
     url: /projects/
 
+  - title: "Presentations"
+    url: /presentations/
+
   - title: "Blog"
     url: /blog/
     children:
