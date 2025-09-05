@@ -9,6 +9,7 @@ This is my Interests page! Here you'll find content about my hobbies and passion
 - Volleyball
 - Gaming (Wild Rift, etc.)
 - Recipes (see [Recipes](/interests/recipes/))
+- Board Games (see [Board Games](/interests/board-games/))
 - Book, Movie, and Anime Reviews
 
 Explore the subpages for more!

@@ -228,7 +228,12 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-
+  ebook-one:
+    output: true
+    permalink: /:collection/:path/
+  ebook-two:
+    output: true
+    permalink: /:collection/:path/
 
 # These settings control how pages and collections are included in the site
 defaults:
@@ -285,7 +290,17 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-
+  # ebooks
+  - scope:
+    path: ""
+    type: ebook-one
+    values:
+      layout: chapter
+  - scope:
+      path: ""
+      type: ebook-two
+    values:
+      layout: chapter
 
 # Sass/SCSS
 sass:
