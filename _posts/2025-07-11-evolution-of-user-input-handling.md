@@ -4,7 +4,7 @@ layout: post
 title: "Understanding Google Agent Development Kit (ADK) and the Evolution of User Input Handling"
 date: 2025-07-11
 permalink: /posts/2025/07/google-adk-user-input-evolution/
-tags: \[google, adk, ai, agents, llm, user-input, backend]
+tags: [google, adk, ai, agents, llm, user-input, backend]
 
 ---
 
