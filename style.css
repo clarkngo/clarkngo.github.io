@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 /* General Body Styling */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #121212;
     color: #ffffff;
     margin: 0;
@@ -10,7 +12,8 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: #1f1f1f;
+    background: rgba(31, 31, 31, 0.8);
+    backdrop-filter: blur(10px);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -58,13 +61,19 @@ section h2 {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1600x900/?nature,water') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1600x900/?technology,abstract') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #ffffff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .hero-text h1 {
@@ -76,24 +85,26 @@ section h2 {
     font-size: 1.5rem;
 }
 
-/* Project and Hobbies Grids */
-.project-grid, .hobbies-grid {
+/* Project, Hobbies, and Experience Grids */
+.project-grid, .hobbies-grid, .experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.project-card, .hobby-card {
+.project-card, .hobby-card, .experience-card {
     background-color: #1f1f1f;
     padding: 2rem;
     border-radius: 8px;
+    border: 1px solid #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover, .hobby-card:hover {
+.project-card:hover, .hobby-card:hover, .experience-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Section */
@@ -105,11 +116,12 @@ section h2 {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 1rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Footer */
