@@ -1,0 +1,47 @@
+.professionalExperience {
+  padding: 4rem 2rem;
+}
+
+.professionalExperience h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experienceCard {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experienceCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.date {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.experienceCard ul {
+  list-style-position: inside;
+}
+
+.experienceCard li {
+  margin-bottom: 0.5rem;
+}

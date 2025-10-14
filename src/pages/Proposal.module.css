@@ -1,0 +1,74 @@
+.proposal {
+  padding: 8rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.proposal h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.proposalCategory {
+  margin-bottom: 4rem;
+}
+
+.proposalCategory h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 1rem;
+}
+
+.proposalList {
+  list-style: none;
+  padding: 0;
+}
+
+.proposalItem {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proposalItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.proposalItem h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #5a0fb3;
+}
+
+.link svg {
+  transition: transform 0.3s ease;
+}
+
+.link:hover svg {
+  transform: translateX(5px);
+}
