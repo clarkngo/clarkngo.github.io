@@ -1,6 +1,7 @@
 {
   "name": "clarkngo.github.io",
   "private": true,
+  "homepage": "https://clarkngo.github.io/clarkngo.github.io",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
