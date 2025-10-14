@@ -4,9 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: "/clarkngo.github.io",
-  server: {
-    open: true,
-    port: 3001,
-  },
+  base: "/clarkngo.github.io"
 }))
