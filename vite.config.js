@@ -8,5 +8,10 @@ export default defineConfig({
     react(), 
     // Add the vite-plugin-singlefile plugin to inline all CSS and JS into index.html
     viteSingleFile(),
-  ]
+  ],
+  
+  build: {
+    // Ensure this is set to your build folder
+    outDir: 'dist', 
+  },
 });
