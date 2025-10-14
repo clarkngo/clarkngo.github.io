@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Professional from './pages/Professional';
@@ -9,7 +9,7 @@ import Proposal from './pages/Proposal';
 import Volunteer from './pages/Volunteer';
 import Workshops from './pages/Workshops';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Layout />,
@@ -24,9 +24,7 @@ const router = createBrowserRouter([
       { path: 'workshops', element: <Workshops /> },
     ],
   },
-], {
-  basename: import.meta.env.DEV ? '/' : '/clarkngo.github.io',
-});
+]);
 
 function App() {
   return <RouterProvider router={router} />;
