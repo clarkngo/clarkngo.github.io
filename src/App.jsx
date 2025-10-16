@@ -11,7 +11,7 @@ import Workshops from './pages/Workshops';
 
 const BlogsRedirect = () => {
   useEffect(() => {
-    window.location.href = 'https://clarkngo.github.io/blogs/';
+    window.location.href = 'https://clarkngo.github.io/blogs';
   }, []);
   return null;
 };

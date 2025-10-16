@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clark Ngo</title>
     <script>
-      // Redirect legacy hash route to external blogs site immediately
+      // Redirect legacy routes to external blogs site immediately (hash and path)
       (function () {
-        if (location.hash === '#/blogs' || location.hash.startsWith('#/blogs')) {
-          location.replace('https://clarkngo.github.io/blogs/');
+        var to = 'https://clarkngo.github.io/blogs';
+        var isHashBlogs = location.hash === '#/blogs' || location.hash.indexOf('#/blogs') === 0;
+        var isPathBlogs = location.pathname === '/blogs' || location.pathname.indexOf('/blogs/') === 0;
+        if (isHashBlogs || isPathBlogs) {
+          location.replace(to);
         }
       })();
     </script>

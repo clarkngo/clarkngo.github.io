@@ -21,7 +21,7 @@ const Layout = () => {
             <li><Link to="/workshops">Workshops</Link></li>
             <li><Link to="/courses">Courses</Link></li>
             <li>
-              <a href="https://clarkngo.github.io/blogs/" target="_blank" rel="noopener noreferrer">
+              <a href="https://clarkngo.github.io/blogs" target="_blank" rel="noopener noreferrer">
                 Blogs
               </a>
             </li>

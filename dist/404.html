@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <meta http-equiv="refresh" content="0; url=/">
+    <script>
+      // GitHub Pages fallback: if someone hits a deep link, handle special redirects
+      (function () {
+        var path = location.pathname;
+        var hash = location.hash;
+        var toBlogs = 'https://clarkngo.github.io/blogs';
+        if (hash.indexOf('#/blogs') === 0 || path === '/blogs' || path.indexOf('/blogs/') === 0) {
+          location.replace(toBlogs);
+          return;
+        }
+        // default: go to root (let SPA router handle other routes)
+        location.replace('/');
+      })();
+    </script>
+  </head>
+  <body>Redirecting…</body>
+</html>
