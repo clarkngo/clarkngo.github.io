@@ -6,6 +6,14 @@
     <link rel="icon" type="image/png" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clark Ngo</title>
+    <script>
+      // Redirect legacy hash route to external blogs site immediately
+      (function () {
+        if (location.hash === '#/blogs' || location.hash.startsWith('#/blogs')) {
+          location.replace('https://clarkngo.github.io/blogs/');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
