@@ -31,6 +31,7 @@ You must first install and configure the `vite-plugin-singlefile`.
 
     ```bash
     npm install -D vite-plugin-singlefile
+    npm install -D vite-plugin-svgr
     ```
 
 2.  **Update `vite.config.js` (or `.ts`):**
@@ -40,11 +41,13 @@ You must first install and configure the `vite-plugin-singlefile`.
     import { defineConfig } from 'vite';
     import react from '@vitejs/plugin-react';
     import { viteSingleFile } from 'vite-plugin-singlefile';
+    import { viteSingleFile } from 'vite-plugin-singlefile';
 
     export default defineConfig({
       plugins: [
         react(), 
         viteSingleFile(),
+        svgr(),        
       ],
 
       build: {
