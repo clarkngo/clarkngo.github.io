@@ -2,12 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Fallback icon; will be overridden below via Vite asset import -->
+    <link rel="icon" type="image/png" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clark Ngo</title>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Set favicon using Vite asset pipeline so PNG from src/assets works in dev and build -->
+    <script type="module">
+      import iconUrl from '/src/assets/mechanized_flame_wolf_head.png';
+      const link = document.querySelector('link[rel="icon"]') || document.createElement('link');
+      link.rel = 'icon';
+      link.type = 'image/png';
+      link.href = iconUrl;
+      if (!link.parentNode) document.head.appendChild(link);
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
