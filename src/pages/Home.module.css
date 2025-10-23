@@ -45,6 +45,74 @@
   margin: 0.75rem auto 0 auto;
 }
 
+/* Two-column hero layout */
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.heroLeft {
+  text-align: left;
+}
+
+.heroRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroRight img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  color: rgba(255,255,255,0.95);
+}
+
+.lead {
+  font-size: 1.125rem;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.95);
+}
+
+.highlights {
+  margin-top: 1.25rem;
+  list-style: none;
+  padding: 0;
+  color: rgba(255,255,255,0.95);
+}
+
+.highlights li {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .heroLeft {
+    order: 2;
+  }
+  .heroRight {
+    order: 1;
+  }
+  .heroRight img {
+    max-width: 360px;
+  }
+}
+
 .projectGrid, .hobbiesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

@@ -10,15 +10,27 @@ const Home = () => {
           I am a passionate and driven software developer with a knack for creating elegant and efficient solutions. My journey in tech has been fueled by a relentless curiosity and a desire to build things that make a difference. I thrive in collaborative environments and am always eager to learn new technologies and take on challenging projects.
         </p>
       </section>
-      <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
-        <div className={styles.heroText}>
-          <h1>Clark Ngo</h1>
-          <p>AI Engineer</p>
-        </div>
-      </section>
+        <section className={styles.hero}>
+               <div className={`${styles.heroInner} container`}>
+                 <div className={styles.heroLeft}>
+                   <div className={styles.heroText}>
+                     <h1>Clark Ngo</h1>
+                     <p className={styles.subtitle}>AI Engineer</p>
+                     <p className={styles.lead}>I build AI-powered applications and MLOps pipelines, and I enjoy making useful tools and tutorials.</p>
 
+                     <ul className={styles.highlights}>
+                       <li>• Retrieval-Augmented Generation & production systems</li>
+                       <li>• Scalable microservices and cloud deployments</li>
+                       <li>• Open-source contributor and community mentor</li>
+                     </ul>
+                   </div>
+                 </div>
+                 <div className={styles.heroRight}>
+                   <img src={heroImage} alt="Clark Ngo" />
+                 </div>
+               </div>
+             </section>
       <section className={styles.work}>
-        <h2>Projects</h2>
         <div className={styles.projectGrid}>
           <div className={styles.projectCard}>
             <h3>Tuklas</h3>
