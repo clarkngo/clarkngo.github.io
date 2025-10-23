@@ -7,22 +7,21 @@ const Home = () => {
       <section className={styles.about}>
         <h2>HI, I'M CLARK!</h2>
         <p>
-          I am a passionate and driven software developer with a knack for creating elegant and efficient solutions. My journey in tech has been fueled by a relentless curiosity and a desire to build things that make a difference. I thrive in collaborative environments and am always eager to learn new technologies and take on challenging projects.
+          Building the future with intelligent systems, and teaching others how to do it. 
         </p>
       </section>
         <section className={styles.hero}>
                <div className={`${styles.heroInner} container`}>
                  <div className={styles.heroLeft}>
                    <div className={styles.heroText}>
-                     <h1>Clark Ngo</h1>
-                     <p className={styles.subtitle}>AI Engineer</p>
-                     <p className={styles.lead}>I build AI-powered applications and MLOps pipelines, and I enjoy making useful tools and tutorials.</p>
-
-                     <ul className={styles.highlights}>
-                       <li>• Retrieval-Augmented Generation & production systems</li>
-                       <li>• Scalable microservices and cloud deployments</li>
-                       <li>• Open-source contributor and community mentor</li>
-                     </ul>
+                      <h3 className={styles.role}>Software Architect and AI Engineer</h3>
+                      <p className={styles.lead}>I'm a Software Architect and AI Engineer passionate about turning complex ideas into scalable, efficient, and user-centric products. I specialize in Full-Stack Development and RAG AI systems. When I'm not coding, I'm mentoring the next generation of engineers.</p>
+                      <h3 className={styles.sectionTitle}>Highlights</h3>
+                      <ul className={styles.highlights}>
+                        <li> • Reduced eBay's root cause identification time for site-impacting changes from 1 minute to 10 seconds.</li>
+                        <li> • Designed a RAG-based chat systems (Gemma/ChromaDB) via FastAPI, implementing MLflow and CI/CD for scalable service delivery.</li>
+                        <li> • Saved $72,000 and achieved 93% job placement for veterans in the Amazon Apprenticeship Program.</li>
+                      </ul>
                    </div>
                  </div>
                  <div className={styles.heroRight}>
