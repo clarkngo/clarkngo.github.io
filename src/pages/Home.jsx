@@ -5,38 +5,10 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <section className={styles.about}>
-        <div className={styles.aboutInner}>
-          <div>
-            <h2>HI, I'M CLARK!</h2>
-            <p className={styles.tagline}>Building the future with intelligent systems, and teaching others how to do it.</p>
-
-            <div className={styles.actions}>
-              <a href="/resume.pdf" className={styles.ctaButton} target="_blank" rel="noopener noreferrer">View Resume</a>
-              <a href="#contact" className={`${styles.ctaButton} ${styles.ghost}`}>Contact</a>
-            </div>
-
-            <div className={styles.socials}>
-              <a href="https://github.com/clarkngo" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/clarkngo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://twitter.com/clarkngo" target="_blank" rel="noopener noreferrer">X</a>
-            </div>
-          </div>
-
-          <div className={styles.aboutStats}>
-            <div className={styles.stat}>
-              <div className={styles.statValue}>10+</div>
-              <div className={styles.statLabel}>Years Experience</div>
-            </div>
-            <div className={styles.stat}>
-              <div className={styles.statValue}>50+</div>
-              <div className={styles.statLabel}>Projects</div>
-            </div>
-            <div className={styles.stat}>
-              <div className={styles.statValue}>30+</div>
-              <div className={styles.statLabel}>Talks & Workshops</div>
-            </div>
-          </div>
-        </div>
+        <h2>HI, I'M CLARK!</h2>
+        <p>
+          Building the future with intelligent systems, and teaching others how to do it. 
+        </p>
       </section>
         <section className={styles.hero}>
                <div className={`${styles.heroInner} container`}>
