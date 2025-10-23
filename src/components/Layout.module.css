@@ -9,9 +9,9 @@
 }
 
 .header {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  color: var(--text-color);
+  /* purple gradient to match site hero */
+  background: linear-gradient(90deg, #6a11cb, #8f4be8);
+  color: #fff;
   padding: 1.5rem 3rem;
   display: flex;
   justify-content: space-between;
@@ -32,6 +32,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
+  color: #fff;
 }
 
 .nav ul {
@@ -69,10 +70,11 @@
 .nav a {
   font-weight: 700;
   transition: color 0.3s ease;
+  color: #fff;
 }
 
 .nav a:hover {
-  color: var(--accent-color);
+  color: #ffffffcc;
 }
 
 .footer {
