@@ -128,6 +128,114 @@
   }
 }
 
+/* Improve mobile layout for narrow phones */
+@media (max-width: 600px) {
+  .hero {
+    height: auto; /* let content determine height */
+    padding: 2rem 1rem; /* reduce vertical padding */
+    align-items: flex-start;
+  }
+
+  .heroText h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .role {
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .sectionTitle {
+    font-size: 1rem;
+    margin-top: 0.9rem;
+  }
+
+  .lead, .heroText p {
+    font-size: 0.98rem;
+    line-height: 1.45;
+    margin-top: 0.5rem;
+    padding: 0 0.25rem;
+  }
+
+  .heroInner {
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .heroRight img {
+    max-width: 320px;
+    width: 90%;
+    height: auto;
+    margin: 0 auto 0.75rem auto;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  }
+
+  .heroLeft {
+    text-align: center; /* keep stacked layout centered on phones */
+    padding-top: 0.5rem;
+  }
+
+  .home section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Further fixes for image overflow and long highlights spilling into next section on very small screens */
+@media (max-width: 480px) {
+  .hero {
+    display: block; /* avoid flex alignment quirks on tiny screens */
+    padding: 1.5rem 0.75rem;
+    overflow: visible;
+    background-size: cover;
+  }
+
+  .heroInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .heroRight {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .heroRight img {
+    max-width: 88%;
+    width: auto;
+    height: auto;
+    margin: 0 0 0.75rem 0;
+    transform: none; /* ensure no transforms cause overflow */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  }
+
+  /* Keep long highlight lists wrapped and contained inside the hero area */
+  .highlights {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .highlights li {
+    word-break: break-word;
+  }
+
+  /* Make sure the next sections start after the hero (clear any accidental overlap) */
+  .work, .hobbies {
+    position: relative;
+    z-index: 0;
+    padding-top: 2rem;
+  }
+}
+
 .projectGrid, .hobbiesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
