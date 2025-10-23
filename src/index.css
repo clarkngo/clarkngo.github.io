@@ -3,7 +3,11 @@
 :root {
   --primary-color: #3a3a3a;
   --secondary-color: #f4f4f4;
-  --accent-color: #6a11cb;
+  /* Pleasing purple palette */
+  --purple-600: #6a11cb;
+  --purple-500: #7b2bdb;
+  --purple-400: #8f4be8;
+  --accent-color: var(--purple-500);
   --background-color: #ffffff;
   --text-color: #333;
   --white: #fff;

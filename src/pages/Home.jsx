@@ -4,18 +4,17 @@ import heroImage from '../assets/hero_clark_frieren.png';
 const Home = () => {
   return (
     <div className={styles.home}>
+      <section className={styles.about}>
+        <h2>HI, I'M CLARK!</h2>
+        <p>
+          I am a passionate and driven software developer with a knack for creating elegant and efficient solutions. My journey in tech has been fueled by a relentless curiosity and a desire to build things that make a difference. I thrive in collaborative environments and am always eager to learn new technologies and take on challenging projects.
+        </p>
+      </section>
       <section className={styles.hero} style={{ backgroundImage: `url(${heroImage})` }}>
         <div className={styles.heroText}>
           <h1>Clark Ngo</h1>
           <p>AI Engineer</p>
         </div>
-      </section>
-
-      <section className={styles.about}>
-        <h2>About Me</h2>
-        <p>
-          I am a passionate and driven software developer with a knack for creating elegant and efficient solutions. My journey in tech has been fueled by a relentless curiosity and a desire to build things that make a difference. I thrive in collaborative environments and am always eager to learn new technologies and take on challenging projects.
-        </p>
       </section>
 
       <section className={styles.work}>
