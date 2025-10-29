@@ -16,6 +16,14 @@ const BlogsRedirect = () => {
   return null;
 };
 
+
+const NotesRedirect = () => {
+  useEffect(() => {
+    window.location.href = 'https://clarkngo.github.io/my-learning-notes/';
+  }, []);
+  return null;
+};
+
 const router = createHashRouter([
   {
     path: '/',
@@ -29,6 +37,7 @@ const router = createHashRouter([
       { path: 'proposal', element: <Proposal /> },
       { path: 'volunteer', element: <Volunteer /> },
       { path: 'workshops', element: <Workshops /> },
+      { path: 'notes', element: <NotesRedirect /> },
     ],
   },
 ]);
