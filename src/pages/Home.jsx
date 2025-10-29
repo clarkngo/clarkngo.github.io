@@ -61,6 +61,11 @@ const Home = () => {
             <p>Explaining complex research papers.</p>
             <a href="https://clarkngo.github.io/paper-explained" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Project</a>
           </div>
+          <div className={styles.projectCard}>
+            <h3>My Learning Notes</h3>
+            <p>Personal learning notes and write-ups on tech topics.</p>
+            <a href="https://clarkngo.github.io/my-learning-notes/" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Notes</a>
+          </div>
         </div>
       </section>
 
