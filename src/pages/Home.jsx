@@ -32,12 +32,12 @@ const Home = () => {
       <section className={styles.work}>
         <div className={styles.projectGrid}>
           <div className={styles.projectCard}>
-            <h3>Tuklas</h3>
-            <p>A project for Tuklas, which means discovery.</p>
-            <a href="https://clarkngo.github.io/tuklas/" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Project</a>
-          </div>
           <div className={styles.projectCard}>
-            <h3>AI-Hub</h3>
+            <h3>Playground</h3>
+            <p>A collection of </p>
+            <a href="https://clarkngo.github.io/playground/" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Project</a>
+          </div>            
+            <h3>AI Hub</h3>
             <p>A hub for AI projects and resources.</p>
             <a href="https://clarkngo.github.io/AI-Hub" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Project</a>
           </div>
@@ -66,6 +66,11 @@ const Home = () => {
             <p>Personal learning notes and write-ups on tech topics.</p>
             <a href="https://clarkngo.github.io/my-learning-notes/" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Notes</a>
           </div>
+          <div className={styles.projectCard}>
+            <h3>Tuklas</h3>
+            <p>A project for Tuklas, which means discovery.</p>
+            <a href="https://clarkngo.github.io/tuklas/" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Project</a>
+          </div>          
         </div>
       </section>
 
