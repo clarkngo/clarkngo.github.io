@@ -1,0 +1,8 @@
+.mentor { padding: 4rem 1rem; max-width: 900px; margin: 0 auto; }
+.mentor h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+.mentor p { color: #555; }
+
+@media (max-width: 600px) {
+  .mentor { padding: 2rem 1rem; }
+  .mentor h2 { font-size: 1.6rem; }
+}

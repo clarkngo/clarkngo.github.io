@@ -15,6 +15,7 @@ const Layout = () => {
         <nav className={styles.nav}>
           <ul>
             <li><Link to="/proposal">Proposal</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
             <li><Link to="/professional">Professional</Link></li>
             <li><Link to="/research">Research</Link></li>
             <li><Link to="/volunteer">Volunteer</Link></li>
