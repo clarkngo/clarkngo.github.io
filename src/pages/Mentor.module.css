@@ -1,8 +1,34 @@
-.mentor { padding: 4rem 1rem; max-width: 900px; margin: 0 auto; }
-.mentor h2 { font-size: 2rem; margin-bottom: 0.5rem; }
-.mentor p { color: #555; }
+.mentor { padding: 4rem 1rem; max-width: 900px; margin: 0 auto; color: #222; }
+.header { text-align: center; margin-bottom: 1.5rem; }
+.title { font-size: 2rem; margin: 0; }
+.headline { color: #6b2fb6; margin-top: 0.4rem; font-weight: 600; }
+
+.about p { color: #333; line-height: 1.6; }
+.about h2,
+.help h2,
+.philosophy h2,
+.impact h2,
+.availability h2 { margin-top: 1.25rem; font-size: 1.4rem; color: #222; }
+
+.cardGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+.card { background: #fff; border: 1px solid #eee; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.card h3 { margin-top: 0; margin-bottom: 0.5rem; }
+.card ul { margin: 0; padding-left: 1.1rem; }
+
+.philosophy ul,
+.impact ul { padding-left: 1.1rem; }
+
+.tags { margin-top: 1.5rem; }
+.tagList { display:flex; flex-wrap:wrap; gap:0.5rem; }
+.tagList span { background:#f3e8ff; color:#4a1f7a; padding:0.35rem 0.6rem; border-radius:999px; font-size:0.9rem; }
+
+@media (max-width: 900px) {
+  .cardGrid { grid-template-columns: repeat(2, 1fr); }
+}
 
 @media (max-width: 600px) {
   .mentor { padding: 2rem 1rem; }
-  .mentor h2 { font-size: 1.6rem; }
+  .title { font-size: 1.6rem; }
+  .cardGrid { grid-template-columns: 1fr; }
+  .headline { font-size: 0.95rem; }
 }
