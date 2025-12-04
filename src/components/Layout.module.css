@@ -8,6 +8,11 @@
   flex-grow: 1;
 }
 
+/* When header is fixed, add top padding so content isn't hidden underneath it. */
+.main {
+  padding-top: 98px; /* accounts for header height (logo + vertical padding) */
+}
+
 .header {
   /* purple gradient to match site hero */
   background: linear-gradient(90deg, #6a11cb, #8f4be8);
@@ -45,6 +50,11 @@
   .header {
     position: static; /* allow header to scroll with content */
     padding: 0.6rem 1rem;
+  }
+
+  /* Header becomes part of the page flow on small screens, so remove extra top padding */
+  .main {
+    padding-top: 0;
   }
 
   .logo img {
