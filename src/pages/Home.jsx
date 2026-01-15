@@ -32,8 +32,13 @@ const Home = () => {
       <section className={styles.work}>
         <div className={styles.projectGrid}>
           <div className={styles.projectCard}>
+            <h3>The Briefing Room</h3>
+            <p>Curated insights, analyses, and strategic content.</p>
+            <a href="https://clarkngo.github.io/the-briefing-room/" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Project</a>
+          </div>
+          <div className={styles.projectCard}>
             <h3>Playground</h3>
-            <p>A collection of </p>
+            <p>A collection of experimental projects and code demos.</p>
             <a href="https://clarkngo.github.io/playground/" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>View Project</a>
           </div>            
           <div className={styles.projectCard}>

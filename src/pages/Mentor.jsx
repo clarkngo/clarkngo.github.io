@@ -162,9 +162,6 @@ const Mentor = () => {
         </ul>
       </section>
 
-      <section className={styles.cta}>
-        <p>If you'd like, I can also draft a cover letter that highlights your "Vibe Coding" philosophy or your transition from industry to education.</p>
-      </section>
     </main>
   );
 };
