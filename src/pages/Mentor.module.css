@@ -1,62 +1,221 @@
-.mentor { padding: 4rem 1rem; max-width: 900px; margin: 0 auto; color: #222; }
-.header { text-align: center; margin-bottom: 1.5rem; }
-.title { font-size: 2rem; margin: 0; }
-.headline { color: #6b2fb6; margin-top: 0.4rem; font-weight: 600; }
+.mentor { min-height: 100vh; }
 
-.about p { color: #333; line-height: 1.6; }
-.about h2,
-.help h2,
-.philosophy h2,
-.impact h2,
-.availability h2 { margin-top: 1.25rem; font-size: 1.4rem; color: #222; }
+.pageHero {
+  background: var(--gradient-hero);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-.cardGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
-.card { background: #fff; border: 1px solid #eee; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
-.card h3 { margin-top: 0; margin-bottom: 0.5rem; }
-.card ul { margin: 0; padding-left: 1.1rem; }
+.pageHero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: var(--off-white);
+  clip-path: ellipse(60% 100% at 50% 100%);
+}
 
-.philosophy ul,
-.impact ul { padding-left: 1.1rem; }
+.pageHero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
 
+.pageHero p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+}
+
+.content {
+  background: var(--off-white);
+  padding: 4rem 2rem 6rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header resume block */
+.headerResume {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.headline {
+  color: var(--purple-core);
+  margin-top: 0.4rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.contact {
+  color: var(--gray-500);
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.contact a { color: inherit; }
+
+.links {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.links a {
+  color: var(--purple-core);
+  font-weight: 600;
+}
+
+/* Section */
+.section { margin-top: 2rem; }
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--purple-core);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--purple-pale);
+}
+
+.lead {
+  font-size: 0.93rem;
+  color: var(--gray-700);
+  line-height: 1.7;
+}
+
+/* Job entries */
+.job {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--purple-core);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--ease-base), box-shadow var(--ease-base);
+}
+
+.job:hover {
+  transform: translateX(4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.job h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 0.3rem;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.job ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.job li {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.job li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--purple-light);
+  font-size: 0.65rem;
+  top: 0.28rem;
+}
+
+/* Card grid */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1.25rem;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.card ul {
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  color: var(--gray-700);
+}
+
+/* Tags */
 .tags { margin-top: 1.5rem; }
-.tagList { display:flex; flex-wrap:wrap; gap:0.5rem; }
-.tagList span { background:#f3e8ff; color:#4a1f7a; padding:0.35rem 0.6rem; border-radius:999px; font-size:0.9rem; }
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tagList span {
+  background: var(--gray-100);
+  color: var(--purple-dark);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--purple-pale);
+}
+
+/* CTA */
+.cta {
+  margin-top: 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px dashed var(--gray-200);
+}
 
 @media (max-width: 900px) {
   .cardGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-  .mentor { padding: 2rem 1rem; }
-  .title { font-size: 1.6rem; }
+  .content { padding: 3rem 1.25rem 4rem; }
+  .name { font-size: 1.5rem; }
   .cardGrid { grid-template-columns: 1fr; }
-  .headline { font-size: 0.95rem; }
-}
-
-/* Resume-specific styles */
-.headerResume { text-align: center; margin-bottom: 1rem; }
-.name { font-size: 1.9rem; margin: 0; font-weight: 700; }
-.contact { color: #444; margin-top: 0.35rem; }
-.contact a { color: inherit; text-decoration: none; }
-.links { margin-top: 0.35rem; color: #555; }
-.links a { color: #4a1f7a; text-decoration: none; }
-
-.section { margin-top: 1.25rem; }
-.sectionTitle { font-size: 1.25rem; margin-bottom: 0.5rem; color: #222; }
-.lead { color: #333; line-height: 1.6; }
-
-.job { margin-top: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #f0f0f0; }
-.job h3 { margin: 0; font-size: 1.05rem; }
-.meta { color: #666; font-size: 0.9rem; margin-bottom: 0.5rem; }
-.job ul { margin: 0; padding-left: 1.1rem; }
-
-.cta { margin-top: 1.25rem; padding: 1rem 0; border-top: 1px dashed #eee; }
-
-@media (max-width: 800px) {
-  .mentor { padding: 2rem 1rem; max-width: 720px; }
-}
-
-@media (max-width: 480px) {
-  .name { font-size: 1.3rem; }
-  .links { font-size: 0.9rem; }
 }

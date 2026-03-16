@@ -23,70 +23,68 @@ const proposals = {
     },
     {
       title: 'AWS Agentic AI call for proposals — Fall 2025',
-      description: 'This grant aims to advance agentic AI research by funding the development of open-source tools and research that benefit the broader AI community, or impactful research related to agents.',
+      description: 'This grant aims to advance agentic AI research by funding open-source tools and research that benefit the broader AI community.',
       grantLink: 'https://www.amazon.science/research-awards/call-for-proposals/aws-agentic-ai-call-for-proposals-fall-2025',
     },
     {
       title: 'NAIRR AI Education Fellowship at CRA',
-      description: "The NAIRR AI Education Fellowship at CRA, funded by the National Science Foundation (NSF), aims to assemble a national cohort of faculty champions to advance undergraduate and master's AI education.",
+      description: "The NAIRR AI Education Fellowship at CRA, funded by NSF, assembles a national cohort of faculty champions to advance undergraduate and master's AI education.",
       grantLink: 'https://cra.org/nairr-pilot-expansion-ai-edu-research-collaboration-network-rcn/#nairr-ai-education-fellowship-at-cra',
     },
   ],
 };
 
-const ArrowIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-
 const Proposal = () => {
   return (
-    <section className={styles.proposal}>
-      <h2>Proposals</h2>
-
-      <div className={styles.proposalCategory}>
-        <h3>Proposal STC</h3>
-        <ul className={styles.proposalList}>
-          {proposals.stc.map((item, index) => (
-            <li key={index} className={styles.proposalItem}>
-              <h4>{item.title}</h4>
-              <p>{item.description}</p>
-              <div className={styles.links}>
-                <a href={item.proposalLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                  View Proposal <ArrowIcon />
-                </a>
-              </div>
-            </li>
-          ))}
-        </ul>
+    <div className={styles.proposal}>
+      <div className={styles.pageHero}>
+        <h2>Proposals</h2>
+        <p>Grants, initiatives, and institutional proposals</p>
       </div>
 
-      <div className={styles.proposalCategory}>
-        <h3>Proposal Grants</h3>
-        <ul className={styles.proposalList}>
-          {proposals.grants.map((item, index) => (
-            <li key={index} className={styles.proposalItem}>
-              <h4>{item.title}</h4>
-              <p>{item.description}</p>
-              <div className={styles.links}>
-                {item.proposalLink && (
+      <div className={styles.content}>
+        <div className={styles.proposalCategory}>
+          <h3>STC Proposals</h3>
+          <ul className={styles.proposalList}>
+            {proposals.stc.map((item, i) => (
+              <li key={i} className={styles.proposalItem}>
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+                <div className={styles.links}>
                   <a href={item.proposalLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                    View Proposal <ArrowIcon />
+                    View Proposal
                   </a>
-                )}
-                {item.grantLink && (
-                  <a href={item.grantLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                    View Grant <ArrowIcon />
-                  </a>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className={styles.proposalCategory}>
+          <h3>Grant Proposals</h3>
+          <ul className={styles.proposalList}>
+            {proposals.grants.map((item, i) => (
+              <li key={i} className={styles.proposalItem}>
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+                <div className={styles.links}>
+                  {item.proposalLink && (
+                    <a href={item.proposalLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                      View Proposal
+                    </a>
+                  )}
+                  {item.grantLink && (
+                    <a href={item.grantLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                      View Grant
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

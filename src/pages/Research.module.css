@@ -1,38 +1,79 @@
-.research {
-  padding: 4rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
+.research { min-height: 100vh; }
 
-.research h2 {
+.pageHero {
+  background: var(--gradient-hero);
+  padding: 5rem 2rem 4rem;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.researchCategory {
-  margin-bottom: 2rem;
+.pageHero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: var(--off-white);
+  clip-path: ellipse(60% 100% at 50% 100%);
 }
 
-.researchCategory h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.5rem;
-}
-
-.researchItem {
-  background-color: var(--white);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
-}
-
-.researchItem p {
+.pageHero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
+.pageHero p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+}
+
+.content {
+  background: var(--off-white);
+  padding: 4rem 2rem 6rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.researchCategory {
+  margin-bottom: 3rem;
+}
+
+.researchCategory h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--purple-core);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--purple-pale);
+}
+
+.researchItem {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  margin-bottom: 1rem;
+  transition: transform var(--ease-base), box-shadow var(--ease-base);
+}
+
+.researchItem:hover {
+  transform: translateX(4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.researchItem p {
+  font-size: 0.93rem;
+  color: var(--gray-700);
+  line-height: 1.65;
+  margin-bottom: 0.4rem;
+}
+
 .researchItem em {
-  color: #666;
+  font-size: 0.87rem;
+  color: var(--gray-500);
 }
