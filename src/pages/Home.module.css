@@ -1,278 +1,384 @@
-.home section {
-  padding: 6rem 2rem;
-  text-align: center;
-}
-
-.home h2 {
-  font-size: 3rem;
-  margin-bottom: 3rem;
-}
-
+/* ─── Hero ─── */
 .hero {
-  height: 80vh;
+  position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
-  text-align: center;
-  background: linear-gradient(180deg, rgba(106,17,203,0.95) 0%, rgba(139,58,219,0.95) 100%);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding: 4rem 1rem;
+  background: var(--gradient-hero);
+  overflow: hidden;
+  margin-top: calc(-1 * var(--header-height)); /* extend behind fixed header */
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 5rem;
 }
 
-.hero::before { display: none; }
+.particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 
-.heroText {
+.heroInner {
   position: relative;
   z-index: 1;
-}
-
-.heroText h1 {
-  font-size: 4rem;
-  margin: 0 0 1rem 0;
-  color: var(--white);
-}
-
-.role {
-  font-size: 2rem;
-  margin: 0 0 0.5rem 0;
-  color: var(--white);
-  font-weight: 600;
-}
-
-.sectionTitle {
-  font-size: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: rgba(255,255,255,0.98);
-}
-
-.heroText p {
-  font-size: 1.25rem;
-  color: rgba(255,255,255,0.9);
-}
-
-.heroText .lead {
-  max-width: 800px;
-  margin: 0.75rem auto 0 auto;
-}
-
-/* Two-column hero layout */
-.heroInner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-width);
+  padding: 0 2rem;
 }
 
+/* ── Left column ── */
 .heroLeft {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple-light);
+  animation: fadeUp 0.7s ease both;
+  animation-delay: 0.1s;
+}
+
+.headline {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  animation: fadeUp 0.7s ease both;
+  animation-delay: 0.22s;
+}
+
+.name {
+  background: linear-gradient(135deg, #fff 30%, var(--purple-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  animation: fadeUp 0.7s ease both;
+  animation-delay: 0.35s;
+}
+
+.br { display: none; }
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  animation: fadeUp 0.7s ease both;
+  animation-delay: 0.48s;
+}
+
+.highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.5;
+}
+
+.highlights strong {
+  color: #fff;
+}
+
+.bullet {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--purple-light);
+  margin-top: 0.5rem;
+  box-shadow: 0 0 8px var(--purple-light);
+}
+
+.heroCtas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeUp 0.7s ease both;
+  animation-delay: 0.6s;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, var(--purple-core), var(--purple-mid));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  transition: box-shadow var(--ease-base), transform var(--ease-fast);
+  box-shadow: 0 4px 20px rgba(106, 17, 203, 0.45);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(106, 17, 203, 0.65);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background var(--ease-fast), border-color var(--ease-fast), transform var(--ease-fast);
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ── Right column ── */
 .heroRight {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 1s ease both;
+  animation-delay: 0.3s;
 }
 
-.heroRight img {
-  max-width: 520px;
+.heroImageWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.heroGlow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(106, 17, 203, 0.55) 0%, transparent 70%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.heroImg {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(168, 85, 247, 0.2);
+  animation: float 6s ease-in-out infinite;
 }
 
-.subtitle {
-  font-size: 1.25rem;
-  margin-top: 0.25rem;
-  color: rgba(255,255,255,0.95);
+/* ── Scroll cue ── */
+.scrollCue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scrollBounce 2s ease-in-out infinite;
+  transition: color var(--ease-fast);
+  z-index: 1;
 }
 
-.lead {
-  font-size: 1.05rem;
-  margin-top: 0.6rem;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.95);
+.scrollCue:hover { color: rgba(255, 255, 255, 0.9); }
+
+/* ─── Work Section ─── */
+.workSection,
+.hobbiesSection {
+  padding: var(--section-pad);
+  background: var(--off-white);
 }
 
-.highlights {
-  margin-top: 0.9rem;
-  list-style: none;
-  padding: 0 0 0 1rem;
-  color: rgba(255,255,255,0.95);
+.hobbiesSection {
+  background: var(--gray-50);
 }
 
-.highlights li {
-  margin: 0.5rem 0;
-  font-weight: 500;
+.sectionContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
+.sectionHead {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle span {
+  background: linear-gradient(135deg, var(--purple-core), var(--purple-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionSub {
+  font-size: 1rem;
+  color: var(--gray-500);
+}
+
+/* ─── Cards ─── */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.hobbiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.projectCard {
+  position: relative;
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  overflow: hidden;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(106, 17, 203, 0.25);
+}
+
+.cardAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--purple-core), var(--purple-light));
+  border-radius: 4px 0 0 4px;
+  opacity: 0;
+  transition: opacity var(--ease-base);
+}
+
+.projectCard:hover .cardAccent {
+  opacity: 1;
+}
+
+.projectCard h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+}
+
+.projectCard p {
+  font-size: 0.93rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--purple-core);
+  transition: gap var(--ease-fast), color var(--ease-fast);
+}
+
+.cardLink:hover {
+  color: var(--purple-mid);
+  gap: 0.55rem;
+}
+
+.cardLink span {
+  transition: transform var(--ease-fast);
+}
+
+.cardLink:hover span {
+  transform: translateX(3px);
+}
+
+/* ─── Responsive ─── */
 @media (max-width: 900px) {
   .heroInner {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .heroLeft {
+    align-items: center;
     order: 2;
   }
+
   .heroRight {
     order: 1;
   }
-  .heroRight img {
-    max-width: 360px;
-  }
-}
 
-/* Improve mobile layout for narrow phones */
-@media (max-width: 600px) {
-  .hero {
-    height: auto; /* let content determine height */
-    padding: 2rem 1rem; /* reduce vertical padding */
-    align-items: flex-start;
-  }
-
-  .heroText h1 {
-    font-size: 2.2rem;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-  }
-
-  .role {
-    font-size: 1.1rem;
-    margin-bottom: 0.35rem;
-  }
-
-  .sectionTitle {
-    font-size: 1rem;
-    margin-top: 0.9rem;
-  }
-
-  .lead, .heroText p {
-    font-size: 0.98rem;
-    line-height: 1.45;
-    margin-top: 0.5rem;
-    padding: 0 0.25rem;
-  }
-
-  .heroInner {
-    gap: 1.25rem;
-    align-items: start;
-  }
-
-  .heroRight img {
-    max-width: 320px;
-    width: 90%;
-    height: auto;
-    margin: 0 auto 0.75rem auto;
-    border-radius: 10px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-  }
-
-  .heroLeft {
-    text-align: center; /* keep stacked layout centered on phones */
-    padding-top: 0.5rem;
-  }
-
-  .home section {
-    padding: 3rem 1rem;
-  }
-}
-
-/* Further fixes for image overflow and long highlights spilling into next section on very small screens */
-@media (max-width: 480px) {
-  .hero {
-    display: block; /* avoid flex alignment quirks on tiny screens */
-    padding: 1.5rem 0.75rem;
-    overflow: visible;
-    background-size: cover;
-  }
-
-  .heroInner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .heroRight {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .heroRight img {
-    max-width: 88%;
-    width: auto;
-    height: auto;
-    margin: 0 0 0.75rem 0;
-    transform: none; /* ensure no transforms cause overflow */
-    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
-  }
-
-  /* Keep long highlight lists wrapped and contained inside the hero area */
-  .highlights {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: 100%;
-    text-align: left;
-    box-sizing: border-box;
+  .heroImg {
+    max-width: 340px;
   }
 
   .highlights li {
-    word-break: break-word;
+    justify-content: center;
+    text-align: left;
   }
 
-  /* Make sure the next sections start after the hero (clear any accidental overlap) */
-  .work, .hobbies {
-    position: relative;
-    z-index: 0;
-    padding-top: 2rem;
+  .br { display: inline; }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-bottom: 4rem;
   }
-}
 
-.projectGrid, .hobbiesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
-  margin-top: 3rem;
-}
+  .headline {
+    font-size: 2.8rem;
+  }
 
-.projectCard {
-  background-color: var(--white);
-  padding: 2.5rem;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-}
+  .heroImg {
+    max-width: 280px;
+  }
 
-.projectCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+  .workSection,
+  .hobbiesSection {
+    padding: 4rem 1.25rem;
+  }
 
-.projectCard h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.ctaButton {
-  display: inline-block;
-  background: var(--accent-color);
-  color: var(--white);
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 1.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.ctaButton:hover {
-  background-color: #5a0fb3;
+  .projectGrid,
+  .hobbiesGrid {
+    grid-template-columns: 1fr;
+  }
 }

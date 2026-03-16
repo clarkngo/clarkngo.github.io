@@ -1,14 +1,90 @@
-.profile { padding: 4rem 1rem; max-width: 1100px; margin: 0 auto; }
-.profile .header { text-align: center; margin-bottom: 2rem; }
-.profile h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-.profile p { color: #666; margin-bottom: 1.5rem; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1.5rem; }
-.card { background: var(--white); padding: 1.5rem; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); text-align: left; }
-.card h3 { margin-bottom: 0.5rem; }
-.card p { margin-bottom: 1rem; color: #555; }
-.cta { display: inline-block; padding: 0.6rem 1rem; background: var(--accent-color); color: #fff; border-radius: 6px; text-decoration: none; font-weight: 700; }
+.profile { min-height: 100vh; }
+
+.pageHero {
+  background: var(--gradient-hero);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pageHero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: var(--off-white);
+  clip-path: ellipse(60% 100% at 50% 100%);
+}
+
+.pageHero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.pageHero p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+}
+
+.content {
+  background: var(--off-white);
+  padding: 4rem 2rem 6rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  border-left: 4px solid var(--purple-core);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+  border-left-color: var(--purple-light);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  font-size: 0.93rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--purple-core);
+  transition: color var(--ease-fast);
+}
+
+.cta::after { content: ' →'; margin-left: 4px; }
+
+.cta:hover { color: var(--purple-mid); }
 
 @media (max-width: 600px) {
-  .profile { padding: 2rem 1rem; }
-  .profile h2 { font-size: 1.8rem; }
+  .grid { grid-template-columns: 1fr; }
 }

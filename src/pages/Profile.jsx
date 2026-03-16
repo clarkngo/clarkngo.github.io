@@ -1,39 +1,35 @@
 import { Link } from 'react-router-dom';
+import { useStaggerReveal } from '../hooks/useScrollReveal';
 import styles from './Profile.module.css';
 
+const cards = [
+  { to: '/professional', title: 'Professional',  desc: 'Work history, roles, and validated experience.' },
+  { to: '/research',     title: 'Research',       desc: 'Publications, presentations, and academic projects.' },
+  { to: '/volunteer',    title: 'Volunteer',      desc: 'Community work, coaching, and outreach activities.' },
+  { to: '/mentor',       title: 'Mentor',         desc: 'Mentoring initiatives, mentee outcomes, and programs.' },
+];
+
 const Profile = () => {
+  const gridRef = useStaggerReveal('reveal', 0.1);
+
   return (
     <div className={styles.profile}>
-      <header className={styles.header}>
+      <div className={styles.pageHero}>
         <h2>Profile</h2>
-        <p>Explore professional, research, volunteer work, and mentoring.</p>
-      </header>
+        <p>Explore professional, research, volunteer work, and mentoring</p>
+      </div>
 
-      <section className={styles.grid}>
-        <div className={styles.card}>
-          <h3>Professional</h3>
-          <p>Work history, roles, and validated experience.</p>
-          <Link to="/professional" className={styles.cta}>View</Link>
+      <div className={styles.content}>
+        <div className={`${styles.grid} stagger`} ref={gridRef}>
+          {cards.map(({ to, title, desc }) => (
+            <div key={to} className={styles.card}>
+              <h3>{title}</h3>
+              <p>{desc}</p>
+              <Link to={to} className={styles.cta}>View</Link>
+            </div>
+          ))}
         </div>
-
-        <div className={styles.card}>
-          <h3>Research</h3>
-          <p>Publications, presentations, and projects.</p>
-          <Link to="/research" className={styles.cta}>View</Link>
-        </div>
-
-        <div className={styles.card}>
-          <h3>Volunteer</h3>
-          <p>Community work, coaching, and outreach activities.</p>
-          <Link to="/volunteer" className={styles.cta}>View</Link>
-        </div>
-
-        <div className={styles.card}>
-          <h3>Mentor</h3>
-          <p>Mentoring initiatives, mentee outcomes, and programs.</p>
-          <Link to="/mentor" className={styles.cta}>View</Link>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };
