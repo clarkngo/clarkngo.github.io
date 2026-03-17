@@ -122,10 +122,13 @@
   gap: 0.4rem;
   background: linear-gradient(135deg, var(--purple-core), var(--purple-mid));
   color: #fff;
+  font-family: inherit;
   font-weight: 700;
   font-size: 0.95rem;
   padding: 0.75rem 1.75rem;
   border-radius: 50px;
+  border: none;
+  cursor: pointer;
   transition: box-shadow var(--ease-base), transform var(--ease-fast);
   box-shadow: 0 4px 20px rgba(106, 17, 203, 0.45);
 }
@@ -202,6 +205,10 @@
   animation: scrollBounce 2s ease-in-out infinite;
   transition: color var(--ease-fast);
   z-index: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .scrollCue:hover { color: rgba(255, 255, 255, 0.9); }

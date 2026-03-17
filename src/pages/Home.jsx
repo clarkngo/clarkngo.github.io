@@ -137,7 +137,12 @@ const Home = () => {
             </ul>
 
             <div className={styles.heroCtas}>
-              <a href="#work" className={styles.ctaPrimary}>See My Work</a>
+              <button
+                className={styles.ctaPrimary}
+                onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                See My Work
+              </button>
               <a href="https://github.com/clarkngo" target="_blank" rel="noopener noreferrer" className={styles.ctaSecondary}>GitHub ↗</a>
             </div>
           </div>
@@ -150,11 +155,11 @@ const Home = () => {
           </div>
         </div>
 
-        <a href="#work" className={styles.scrollCue} aria-label="Scroll down">
+        <button className={styles.scrollCue} aria-label="Scroll down" onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="6 9 12 15 18 9" />
           </svg>
-        </a>
+        </button>
       </section>
 
       {/* ══ WORK ══ */}
