@@ -130,15 +130,15 @@ const Home = () => {
             <ul className={styles.highlights}>
               <li>
                 <span className={styles.bullet} />
-                Turned 1-minute fire drills into <strong>10-second fixes</strong> at eBay — engineering that saves real money
+                <span>Made eBay engineers <strong>6× faster</strong> at catching production fires</span>
               </li>
               <li>
                 <span className={styles.bullet} />
-                Building AI that <strong>retrieves facts instead of inventing them</strong> — RAG systems in production
+                <span>Building AI that <strong>doesn't hallucinate</strong> — RAG pipelines with real retrieval, in production</span>
               </li>
               <li>
                 <span className={styles.bullet} />
-                <strong>$72K budget. 17 weeks. 93% of veterans hired.</strong> Not luck — it was engineered.
+                <span><strong>93% of veterans hired</strong> — $72K budget, 17 weeks, engineered from scratch</span>
               </li>
             </ul>
 
