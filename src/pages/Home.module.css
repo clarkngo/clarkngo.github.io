@@ -202,6 +202,10 @@
   animation: scrollBounce 2s ease-in-out infinite;
   transition: color var(--ease-fast);
   z-index: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .scrollCue:hover { color: rgba(255, 255, 255, 0.9); }
@@ -244,6 +248,91 @@
 .sectionSub {
   font-size: 1rem;
   color: var(--gray-500);
+}
+
+/* ─── Featured Card ─── */
+.featuredCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-core) 60%, var(--purple-mid) 100%);
+  border-radius: var(--card-radius);
+  padding: 2.25rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base);
+  box-shadow: var(--glow-md);
+}
+
+.featuredCard::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(168,85,247,0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.featuredCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow-lg);
+}
+
+.featuredBadge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 0.85rem;
+}
+
+.featuredCard h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.featuredCard p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+  max-width: 700px;
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.featuredCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.55rem 1.25rem;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  transition: background var(--ease-fast), border-color var(--ease-fast);
+}
+
+.featuredCard:hover .featuredCta {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
 }
 
 /* ─── Cards ─── */

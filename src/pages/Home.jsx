@@ -79,16 +79,22 @@ const ParticleCanvas = () => {
 };
 
 /* ── Project data ── */
+const featuredProject = {
+  title: 'Playground',
+  desc: 'My most active space — 30+ live projects spanning AI agents, RAG systems, full-stack apps, system design, microservices, and more. If you only click one link, make it this one.',
+  href: 'https://clarkngo.github.io/playground/',
+  cta: 'Explore the Playground',
+};
+
 const projects = [
-  { title: 'The Briefing Room',  desc: 'Curated insights, analyses, and strategic content.',          href: 'https://clarkngo.github.io/the-briefing-room/',   cta: 'View Project' },
-  { title: 'Playground',         desc: 'A collection of experimental projects and code demos.',       href: 'https://clarkngo.github.io/playground/',           cta: 'View Project' },
-  { title: 'AI Hub',             desc: 'A hub for AI projects and resources.',                        href: 'https://clarkngo.github.io/AI-Hub',                cta: 'View Project' },
-  { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',          href: 'https://clarkngo.github.io/microservices',         cta: 'View Project' },
-  { title: 'System Design',      desc: 'A collection of system design resources and case studies.',   href: 'https://clarkngo.github.io/system-design',         cta: 'View Project' },
-  { title: 'Agent Development',  desc: 'A project on agent development.',                             href: 'https://clarkngo.github.io/agent-development/',    cta: 'View Project' },
-  { title: 'Paper Explained',    desc: 'Explaining complex research papers in plain language.',       href: 'https://clarkngo.github.io/paper-explained',       cta: 'View Project' },
-  { title: 'My Learning Notes',  desc: 'Personal learning notes and write-ups on tech topics.',      href: 'https://clarkngo.github.io/my-learning-notes/',    cta: 'View Notes' },
-  { title: 'Tuklas',             desc: 'A project for Tuklas, which means discovery.',               href: 'https://clarkngo.github.io/tuklas/',               cta: 'View Project' },
+  { title: 'The Briefing Room',  desc: 'Curated insights, analyses, and strategic content.',        href: 'https://clarkngo.github.io/the-briefing-room/',  cta: 'View Project' },
+  { title: 'AI Hub',             desc: 'A hub for AI projects and resources.',                      href: 'https://clarkngo.github.io/AI-Hub',              cta: 'View Project' },
+  { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
+  { title: 'System Design',      desc: 'System design resources and case studies.',                 href: 'https://clarkngo.github.io/system-design',       cta: 'View Project' },
+  { title: 'Agent Development',  desc: 'A project on agent development.',                           href: 'https://clarkngo.github.io/agent-development/',  cta: 'View Project' },
+  { title: 'Paper Explained',    desc: 'Explaining complex research papers in plain language.',     href: 'https://clarkngo.github.io/paper-explained',     cta: 'View Project' },
+  { title: 'My Learning Notes',  desc: 'Personal learning notes and write-ups on tech topics.',    href: 'https://clarkngo.github.io/my-learning-notes/',  cta: 'View Notes' },
+  { title: 'Tuklas',             desc: 'A project for Tuklas, which means discovery.',             href: 'https://clarkngo.github.io/tuklas/',             cta: 'View Project' },
 ];
 
 const hobbies = [
@@ -124,21 +130,21 @@ const Home = () => {
             <ul className={styles.highlights}>
               <li>
                 <span className={styles.bullet} />
-                Reduced eBay's root cause identification time from&nbsp;<strong>1&nbsp;min → 10&nbsp;sec</strong>
+                Turned 1-minute fire drills into <strong>10-second fixes</strong> at eBay — engineering that saves real money
               </li>
               <li>
                 <span className={styles.bullet} />
-                Designed RAG-based chat systems with Gemma&nbsp;/&nbsp;ChromaDB&nbsp;/&nbsp;FastAPI
+                Building AI that <strong>retrieves facts instead of inventing them</strong> — RAG systems in production
               </li>
               <li>
                 <span className={styles.bullet} />
-                Saved <strong>$72,000</strong> with&nbsp;<strong>93%</strong> job placement for veterans
+                <strong>$72K budget. 17 weeks. 93% of veterans hired.</strong> Not luck — it was engineered.
               </li>
             </ul>
 
             <div className={styles.heroCtas}>
-              <a href="#work" className={styles.ctaPrimary}>See My Work</a>
-              <a href="https://github.com/clarkngo" target="_blank" rel="noopener noreferrer" className={styles.ctaSecondary}>GitHub ↗</a>
+              <a href="https://github.com/clarkngo" target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>GitHub ↗</a>
+              <a href="https://clarkngo.github.io/playground/" target="_blank" rel="noopener noreferrer" className={styles.ctaSecondary}>Playground ↗</a>
             </div>
           </div>
 
@@ -150,11 +156,11 @@ const Home = () => {
           </div>
         </div>
 
-        <a href="#work" className={styles.scrollCue} aria-label="Scroll down">
+        <button className={styles.scrollCue} aria-label="Scroll down" onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="6 9 12 15 18 9" />
           </svg>
-        </a>
+        </button>
       </section>
 
       {/* ══ WORK ══ */}
@@ -166,6 +172,13 @@ const Home = () => {
             </h2>
             <p className={styles.sectionSub}>Projects, tools, and experiments I've built</p>
           </div>
+
+          <a href={featuredProject.href} target="_blank" rel="noopener noreferrer" className={styles.featuredCard}>
+            <span className={styles.featuredBadge}>Featured</span>
+            <h3>{featuredProject.title}</h3>
+            <p>{featuredProject.desc}</p>
+            <span className={styles.featuredCta}>{featuredProject.cta} →</span>
+          </a>
 
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
             {projects.map(({ title, desc, href, cta }) => (
