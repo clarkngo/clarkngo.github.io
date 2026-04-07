@@ -62,6 +62,24 @@ const Layout = () => {
                 </a>
               </li>
               <li>
+                <a
+                  href="https://clarkngo.github.io/concepts/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Concepts
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://clarkngo.github.io/commands"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Commands
+                </a>
+              </li>
+              <li>
                 <Link to="/blogs">Blogs</Link>
               </li>
             </ul>
