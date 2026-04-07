@@ -124,21 +124,21 @@ const Home = () => {
               <span className={styles.name}>Clark.</span>
             </h1>
             <p className={styles.tagline}>
-              Building the future with intelligent systems,<br className={styles.br} /> and teaching others how to do it.
+              I build things, ship them, and then explain how they work.
             </p>
 
             <ul className={styles.highlights}>
               <li>
                 <span className={styles.bullet} />
-                Turned 1-minute fire drills into <strong>10-second fixes</strong> at eBay — engineering that saves real money
+                <span>I'm an engineer who can't stop teaching — workshops, bootcamps, YouTube, you name it</span>
               </li>
               <li>
                 <span className={styles.bullet} />
-                Building AI that <strong>retrieves facts instead of inventing them</strong> — RAG systems in production
+                <span>I coach volleyball on weekends. <strong>Same skill</strong> as engineering: get the team moving together</span>
               </li>
               <li>
                 <span className={styles.bullet} />
-                <strong>$72K budget. 17 weeks. 93% of veterans hired.</strong> Not luck — it was engineered.
+                <span>I keep 30+ projects running in public because <strong>the best way to learn is to ship</strong></span>
               </li>
             </ul>
 
