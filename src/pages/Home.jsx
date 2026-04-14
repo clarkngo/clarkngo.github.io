@@ -87,6 +87,7 @@ const featuredProject = {
 };
 
 const projects = [
+  { title: 'Physical AI',        desc: 'Exploring the intersection of AI and the physical world.',  href: 'https://clarkngo.github.io/physical-ai/',        cta: 'View Project' },
   { title: 'The Briefing Room',  desc: 'Curated insights, analyses, and strategic content.',        href: 'https://clarkngo.github.io/the-briefing-room/',  cta: 'View Project' },
   { title: 'AI Hub',             desc: 'A hub for AI projects and resources.',                      href: 'https://clarkngo.github.io/AI-Hub',              cta: 'View Project' },
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
