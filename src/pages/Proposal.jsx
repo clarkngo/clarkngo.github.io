@@ -10,6 +10,11 @@ const proposals = {
   ],
   grants: [
     {
+      title: 'NSF TechAccess: AI-Ready America (NSF 26-508)',
+      description: 'NSF solicitation to expand access to AI education and workforce development, preparing Americans for an AI-driven economy.',
+      grantLink: 'https://www.nsf.gov/funding/opportunities/techaccess-ai-ready-america/nsf26-508/solicitation',
+    },
+    {
       title: 'NSF-STEM-K12',
       description: 'A proposal for the NSF-STEM-K12 Program.',
       proposalLink: 'https://clarkngo.github.io/NSF-STEM-K12/',
