@@ -250,6 +250,20 @@
   color: var(--gray-500);
 }
 
+/* ─── Featured Grid ─── */
+.featuredGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .featuredGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ─── Featured Card ─── */
 .featuredCard {
   display: block;
