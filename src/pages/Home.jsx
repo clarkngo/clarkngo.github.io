@@ -79,12 +79,20 @@ const ParticleCanvas = () => {
 };
 
 /* ── Project data ── */
-const featuredProject = {
-  title: 'Playground',
-  desc: 'My most active space — 30+ live projects spanning AI agents, RAG systems, full-stack apps, system design, microservices, and more. If you only click one link, make it this one.',
-  href: 'https://clarkngo.github.io/playground/',
-  cta: 'Explore the Playground',
-};
+const featuredProjects = [
+  {
+    title: 'Playground',
+    desc: 'My most active space — 30+ live projects spanning AI agents, RAG systems, full-stack apps, system design, microservices, and more. If you only click one link, make it this one.',
+    href: 'https://clarkngo.github.io/playground/',
+    cta: 'Explore the Playground',
+  },
+  {
+    title: 'CityU Contributions',
+    desc: 'A collection of everything I\'ve built, taught, and shipped at City University of Seattle — courses, workshops, AI tools, and research that shaped the program.',
+    href: 'https://clarkngo.github.io/cityu-contributions/',
+    cta: 'View Contributions',
+  },
+];
 
 const projects = [
   { title: 'Physical AI',        desc: 'Exploring the intersection of AI and the physical world.',  href: 'https://clarkngo.github.io/physical-ai/',        cta: 'View Project' },
@@ -174,12 +182,16 @@ const Home = () => {
             <p className={styles.sectionSub}>Projects, tools, and experiments I've built</p>
           </div>
 
-          <a href={featuredProject.href} target="_blank" rel="noopener noreferrer" className={styles.featuredCard}>
-            <span className={styles.featuredBadge}>Featured</span>
-            <h3>{featuredProject.title}</h3>
-            <p>{featuredProject.desc}</p>
-            <span className={styles.featuredCta}>{featuredProject.cta} →</span>
-          </a>
+          <div className={styles.featuredGrid}>
+            {featuredProjects.map(({ title, desc, href, cta }) => (
+              <a key={title} href={href} target="_blank" rel="noopener noreferrer" className={styles.featuredCard}>
+                <span className={styles.featuredBadge}>Featured</span>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                <span className={styles.featuredCta}>{cta} →</span>
+              </a>
+            ))}
+          </div>
 
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
             {projects.map(({ title, desc, href, cta }) => (
