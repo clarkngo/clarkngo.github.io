@@ -3,6 +3,12 @@ import { useStaggerReveal, useScrollReveal } from '../hooks/useScrollReveal';
 import styles from './Home.module.css';
 import heroImage from '../assets/hero_clark_frieren.png';
 
+/* load Orbitron + Rajdhani for the PokeHazard card */
+const pokeHazardFonts = document.createElement('link');
+pokeHazardFonts.rel = 'stylesheet';
+pokeHazardFonts.href = 'https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600&display=swap';
+document.head.appendChild(pokeHazardFonts);
+
 /* ── Particle canvas ── */
 const ParticleCanvas = () => {
   const canvasRef = useRef(null);
@@ -180,6 +186,19 @@ const Home = () => {
             <h3>{featuredProject.title}</h3>
             <p>{featuredProject.desc}</p>
             <span className={styles.featuredCta}>{featuredProject.cta} →</span>
+          </a>
+
+          {/* ── PokeHazard themed card ── */}
+          <a href="https://clarkngo.github.io/poke-hazard/docs/" target="_blank" rel="noopener noreferrer" className={styles.pokeHazardCard}>
+            <div className={styles.pokeHazardInner}>
+              <span className={styles.pokeHazardIcon}>☣</span>
+              <div className={styles.pokeHazardBody}>
+                <span className={styles.pokeHazardBadge}>// VIRAL INCIDENT REPORT //</span>
+                <h3 className={styles.pokeHazardTitle}>PokéHazard — Docs</h3>
+                <p className={styles.pokeHazardDesc}>Capture. Mutate. Survive. A survival-horror twist on the Pokémon universe — specimen classifications, phase logs, and the full game design breakdown.</p>
+                <span className={styles.pokeHazardCta}>Access Files ↗</span>
+              </div>
+            </div>
           </a>
 
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
