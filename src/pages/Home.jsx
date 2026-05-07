@@ -189,7 +189,7 @@ const Home = () => {
           </a>
 
           {/* ── PokeHazard themed card ── */}
-          <a href="https://clarkngo.github.io/poke-hazard/docs/" target="_blank" rel="noopener noreferrer" className={styles.pokeHazardCard}>
+          <a href="https://clarkngo.github.io/poke-hazard/" target="_blank" rel="noopener noreferrer" className={styles.pokeHazardCard}>
             <div className={styles.pokeHazardInner}>
               <span className={styles.pokeHazardIcon}>☣</span>
               <div className={styles.pokeHazardBody}>
