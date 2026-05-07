@@ -434,6 +434,146 @@
   transform: translateX(3px);
 }
 
+/* ─── Physical AI Card ─── */
+.physicalAiCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(160deg, #031226 0%, #020f20 100%);
+  border: 1px solid rgba(0, 163, 224, 0.22);
+  border-radius: var(--card-radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #94a3b8;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  box-shadow: 0 0 0 1px rgba(0, 163, 224, 0.08), 0 18px 60px rgba(0, 45, 98, 0.3);
+}
+
+.physicalAiRadialGlow {
+  position: absolute;
+  top: -40%; right: -5%;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(0, 163, 224, 0.13) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* top cyan line on hover */
+.physicalAiCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00A3E0, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.physicalAiCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 163, 224, 0.48);
+  box-shadow: 0 0 0 1px rgba(0, 163, 224, 0.18), 0 18px 80px rgba(0, 45, 98, 0.45), 0 0 40px rgba(0, 163, 224, 0.07);
+}
+
+.physicalAiCard:hover::after { opacity: 1; }
+
+.physicalAiInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+/* Sonar ping */
+.physicalAiSonar {
+  flex-shrink: 0;
+  position: relative;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.physicalAiSonarDot {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #00A3E0;
+  z-index: 1;
+  box-shadow: 0 0 8px rgba(0, 163, 224, 0.7);
+}
+
+.physicalAiSonarRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 163, 224, 0.55);
+  animation: physicalAiSonarExpand 2.4s ease-out infinite;
+}
+
+.physicalAiSonarRing2 {
+  animation-delay: 1.2s;
+}
+
+@keyframes physicalAiSonarExpand {
+  0%   { transform: scale(0.35); opacity: 0.85; }
+  100% { transform: scale(2.8);  opacity: 0; }
+}
+
+.physicalAiBody { flex: 1; }
+
+.physicalAiBadge {
+  display: inline-block;
+  border: 1px solid rgba(0, 163, 224, 0.3);
+  color: rgba(0, 163, 224, 0.8);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.physicalAiTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f2f2f2;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.physicalAiDesc {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.physicalAiCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #00A3E0;
+  border: 1px solid rgba(0, 163, 224, 0.38);
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.physicalAiCard:hover .physicalAiCta {
+  background: rgba(0, 163, 224, 0.08);
+  border-color: rgba(0, 163, 224, 0.65);
+  box-shadow: 0 0 14px rgba(0, 163, 224, 0.18);
+}
+
 /* ─── PokeHazard Card ─── */
 .pokeHazardCard {
   display: block;

@@ -101,7 +101,6 @@ const featuredProjects = [
 ];
 
 const projects = [
-  { title: 'Physical AI',        desc: 'Exploring the intersection of AI and the physical world.',  href: 'https://clarkngo.github.io/physical-ai/',        cta: 'View Project' },
   { title: 'The Briefing Room',  desc: 'Curated insights, analyses, and strategic content.',        href: 'https://clarkngo.github.io/the-briefing-room/',  cta: 'View Project' },
   { title: 'AI Hub',             desc: 'A hub for AI projects and resources.',                      href: 'https://clarkngo.github.io/AI-Hub',              cta: 'View Project' },
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
@@ -199,6 +198,24 @@ const Home = () => {
               </a>
             ))}
           </div>
+
+          {/* ── Physical AI themed card ── */}
+          <a href="https://clarkngo.github.io/physical-ai/" target="_blank" rel="noopener noreferrer" className={styles.physicalAiCard}>
+            <div className={styles.physicalAiRadialGlow} />
+            <div className={styles.physicalAiInner}>
+              <div className={styles.physicalAiSonar}>
+                <span className={styles.physicalAiSonarRing} />
+                <span className={`${styles.physicalAiSonarRing} ${styles.physicalAiSonarRing2}`} />
+                <span className={styles.physicalAiSonarDot} />
+              </div>
+              <div className={styles.physicalAiBody}>
+                <span className={styles.physicalAiBadge}>// TELEMETRY ONLINE //</span>
+                <h3 className={styles.physicalAiTitle}>Physical AI</h3>
+                <p className={styles.physicalAiDesc}>Where intelligence meets the physical world — autonomous systems, maritime robotics, ROS, simulators, and research at the edge of embodied AI.</p>
+                <span className={styles.physicalAiCta}>Access System ↗</span>
+              </div>
+            </div>
+          </a>
 
           {/* ── PokeHazard themed card ── */}
           <a href="https://clarkngo.github.io/poke-hazard/" target="_blank" rel="noopener noreferrer" className={styles.pokeHazardCard}>
