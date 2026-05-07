@@ -1,91 +1,182 @@
-.workshops {
-  padding: 8rem 2rem;
-  max-width: 900px;
+.workshops { min-height: 100vh; }
+
+.pageHero {
+  background: var(--gradient-hero);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pageHero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: var(--off-white);
+  clip-path: ellipse(60% 100% at 50% 100%);
+}
+
+.pageHero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.pageHero p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+}
+
+.content {
+  background: var(--off-white);
+  padding: 4rem 2rem 6rem;
+  max-width: 940px;
   margin: 0 auto;
 }
 
-.workshops h2 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 4rem;
-}
-
+/* Featured workshop */
 .highlightedWorkshop {
-  background-color: var(--secondary-color);
-  padding: 3rem;
-  border-radius: 10px;
-  margin-bottom: 4rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple-core));
+  color: #fff;
+  padding: 2.5rem;
+  border-radius: var(--card-radius);
+  margin-bottom: 3rem;
+  box-shadow: var(--glow-md);
 }
 
 .highlightedWorkshop h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: #fff;
 }
 
-.workshopList {
+.highlightedWorkshop .organization {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--purple-pale);
+  margin-bottom: 0.25rem;
+}
+
+.highlightedWorkshop .date {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+}
+
+.highlightedWorkshop ul {
   list-style: none;
   padding: 0;
-}
-
-.workshopItem {
-  background-color: var(--white);
-  padding: 2.5rem;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.workshopItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.workshopItem h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.organization {
-  font-weight: 700;
-  color: var(--accent-color);
-  margin-bottom: 0.5rem;
-}
-
-.date {
-  color: #666;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
-.workshopItem ul, .highlightedWorkshop ul {
-  list-style-position: inside;
-  padding-left: 1rem;
+.highlightedWorkshop li {
+  font-size: 0.93rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  padding-left: 1.1rem;
+  position: relative;
 }
 
-.workshopItem li, .highlightedWorkshop li {
-  margin-bottom: 0.5rem;
+.highlightedWorkshop li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--purple-pale);
+  font-size: 0.7rem;
+  top: 0.25rem;
+}
+
+/* Workshop list */
+.workshopList { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.25rem; }
+
+.workshopItem {
+  background: var(--card-bg);
+  padding: 1.75rem 2rem;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--purple-core);
+  transition: transform var(--ease-base), box-shadow var(--ease-base);
+}
+
+.workshopItem:hover {
+  transform: translateX(6px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.workshopItem h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.organization {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--purple-core);
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.workshopItem ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.workshopItem li {
+  font-size: 0.92rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.workshopItem li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--purple-light);
+  font-size: 0.7rem;
+  top: 0.25rem;
 }
 
 .link {
-  color: var(--accent-color);
-  font-weight: 700;
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: color 0.3s ease;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--purple-core);
   margin-top: 1rem;
+  transition: gap var(--ease-fast), color var(--ease-fast);
 }
 
 .link:hover {
-  color: #5a0fb3;
-}
-
-.link svg {
-  transition: transform 0.3s ease;
-}
-
-.link:hover svg {
-  transform: translateX(5px);
+  color: var(--purple-mid);
+  gap: 0.6rem;
 }
