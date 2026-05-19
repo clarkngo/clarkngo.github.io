@@ -722,6 +722,137 @@
   .br { display: inline; }
 }
 
+/* ─── Orator Lab Card ─── */
+.oratorLabCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(160deg, #0d0900 0%, #160e00 100%);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--card-radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #c2a46e;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.06), 0 18px 60px rgba(60, 30, 0, 0.3);
+}
+
+.oratorLabGlow {
+  position: absolute;
+  top: -40%; right: -5%;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.oratorLabCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.oratorLabCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.14), 0 18px 80px rgba(60, 30, 0, 0.45), 0 0 40px rgba(245, 158, 11, 0.06);
+}
+
+.oratorLabCard:hover::after { opacity: 1; }
+
+.oratorLabInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+/* Audio equalizer bars */
+.oratorLabWave {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  width: 2.8rem;
+  height: 2.8rem;
+  padding-bottom: 2px;
+}
+
+.oratorLabBar {
+  flex: 1;
+  background: #f59e0b;
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.5);
+  animation: oratorBarPulse 1.2s ease-in-out infinite;
+  height: 60%;
+}
+
+.oratorLabBar2 { animation-delay: 0.2s; height: 85%; }
+.oratorLabBar3 { animation-delay: 0.4s; height: 40%; }
+.oratorLabBar4 { animation-delay: 0.1s; height: 70%; }
+.oratorLabBar5 { animation-delay: 0.3s; height: 55%; }
+
+@keyframes oratorBarPulse {
+  0%, 100% { transform: scaleY(1); }
+  50%       { transform: scaleY(0.3); }
+}
+
+.oratorLabBody { flex: 1; }
+
+.oratorLabBadge {
+  display: inline-block;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: rgba(245, 158, 11, 0.8);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.oratorLabTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fde68a;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.oratorLabDesc {
+  font-size: 0.95rem;
+  color: #c2a46e;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.oratorLabCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.oratorLabCard:hover .oratorLabCta {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.65);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.18);
+}
+
 @media (max-width: 600px) {
   .hero {
     padding-bottom: 4rem;

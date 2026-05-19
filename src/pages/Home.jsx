@@ -230,6 +230,26 @@ const Home = () => {
             </div>
           </a>
 
+          {/* ── Orator Lab themed card ── */}
+          <a href="https://clarkngo.github.io/orator-lab/" target="_blank" rel="noopener noreferrer" className={styles.oratorLabCard}>
+            <div className={styles.oratorLabGlow} />
+            <div className={styles.oratorLabInner}>
+              <div className={styles.oratorLabWave}>
+                <span className={styles.oratorLabBar} />
+                <span className={`${styles.oratorLabBar} ${styles.oratorLabBar2}`} />
+                <span className={`${styles.oratorLabBar} ${styles.oratorLabBar3}`} />
+                <span className={`${styles.oratorLabBar} ${styles.oratorLabBar4}`} />
+                <span className={`${styles.oratorLabBar} ${styles.oratorLabBar5}`} />
+              </div>
+              <div className={styles.oratorLabBody}>
+                <span className={styles.oratorLabBadge}>// SIGNAL LIVE //</span>
+                <h3 className={styles.oratorLabTitle}>Orator Lab</h3>
+                <p className={styles.oratorLabDesc}>Refine your rhetoric, sharpen your delivery. An AI-powered speech coach that dissects your words, maps rhetorical friction points, and hands you back a better speaker.</p>
+                <span className={styles.oratorLabCta}>Enter the Lab ↗</span>
+              </div>
+            </div>
+          </a>
+
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
             {projects.map(({ title, desc, href, cta }) => (
               <div key={title} className={styles.projectCard}>
