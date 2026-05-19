@@ -3,6 +3,12 @@ import { useStaggerReveal, useScrollReveal } from '../hooks/useScrollReveal';
 import styles from './Home.module.css';
 import heroImage from '../assets/hero_clark_frieren.png';
 
+/* load Orbitron + Rajdhani for the PokeHazard card */
+const pokeHazardFonts = document.createElement('link');
+pokeHazardFonts.rel = 'stylesheet';
+pokeHazardFonts.href = 'https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600&display=swap';
+document.head.appendChild(pokeHazardFonts);
+
 /* ── Particle canvas ── */
 const ParticleCanvas = () => {
   const canvasRef = useRef(null);
@@ -79,15 +85,22 @@ const ParticleCanvas = () => {
 };
 
 /* ── Project data ── */
-const featuredProject = {
-  title: 'Playground',
-  desc: 'My most active space — 30+ live projects spanning AI agents, RAG systems, full-stack apps, system design, microservices, and more. If you only click one link, make it this one.',
-  href: 'https://clarkngo.github.io/playground/',
-  cta: 'Explore the Playground',
-};
+const featuredProjects = [
+  {
+    title: 'Playground',
+    desc: 'My most active space — 30+ live projects spanning AI agents, RAG systems, full-stack apps, system design, microservices, and more. If you only click one link, make it this one.',
+    href: 'https://clarkngo.github.io/playground/',
+    cta: 'Explore the Playground',
+  },
+  {
+    title: 'CityU Contributions',
+    desc: 'A collection of everything I\'ve built, taught, and shipped at City University of Seattle — courses, workshops, AI tools, and research that shaped the program.',
+    href: 'https://clarkngo.github.io/cityu-contributions/',
+    cta: 'View Contributions',
+  },
+];
 
 const projects = [
-  { title: 'Physical AI',        desc: 'Exploring the intersection of AI and the physical world.',  href: 'https://clarkngo.github.io/physical-ai/',        cta: 'View Project' },
   { title: 'The Briefing Room',  desc: 'Curated insights, analyses, and strategic content.',        href: 'https://clarkngo.github.io/the-briefing-room/',  cta: 'View Project' },
   { title: 'AI Hub',             desc: 'A hub for AI projects and resources.',                      href: 'https://clarkngo.github.io/AI-Hub',              cta: 'View Project' },
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
@@ -175,11 +188,46 @@ const Home = () => {
             <p className={styles.sectionSub}>Projects, tools, and experiments I've built</p>
           </div>
 
-          <a href={featuredProject.href} target="_blank" rel="noopener noreferrer" className={styles.featuredCard}>
-            <span className={styles.featuredBadge}>Featured</span>
-            <h3>{featuredProject.title}</h3>
-            <p>{featuredProject.desc}</p>
-            <span className={styles.featuredCta}>{featuredProject.cta} →</span>
+          <div className={styles.featuredGrid}>
+            {featuredProjects.map(({ title, desc, href, cta }) => (
+              <a key={title} href={href} target="_blank" rel="noopener noreferrer" className={styles.featuredCard}>
+                <span className={styles.featuredBadge}>Featured</span>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                <span className={styles.featuredCta}>{cta} →</span>
+              </a>
+            ))}
+          </div>
+
+          {/* ── Physical AI themed card ── */}
+          <a href="https://clarkngo.github.io/physical-ai/" target="_blank" rel="noopener noreferrer" className={styles.physicalAiCard}>
+            <div className={styles.physicalAiRadialGlow} />
+            <div className={styles.physicalAiInner}>
+              <div className={styles.physicalAiSonar}>
+                <span className={styles.physicalAiSonarRing} />
+                <span className={`${styles.physicalAiSonarRing} ${styles.physicalAiSonarRing2}`} />
+                <span className={styles.physicalAiSonarDot} />
+              </div>
+              <div className={styles.physicalAiBody}>
+                <span className={styles.physicalAiBadge}>// TELEMETRY ONLINE //</span>
+                <h3 className={styles.physicalAiTitle}>Physical AI</h3>
+                <p className={styles.physicalAiDesc}>Where intelligence meets the physical world — autonomous systems, maritime robotics, ROS, simulators, and research at the edge of embodied AI.</p>
+                <span className={styles.physicalAiCta}>Access System ↗</span>
+              </div>
+            </div>
+          </a>
+
+          {/* ── PokeHazard themed card ── */}
+          <a href="https://clarkngo.github.io/poke-hazard/" target="_blank" rel="noopener noreferrer" className={styles.pokeHazardCard}>
+            <div className={styles.pokeHazardInner}>
+              <span className={styles.pokeHazardIcon}>☣</span>
+              <div className={styles.pokeHazardBody}>
+                <span className={styles.pokeHazardBadge}>// VIRAL INCIDENT REPORT //</span>
+                <h3 className={styles.pokeHazardTitle}>PokéHazard</h3>
+                <p className={styles.pokeHazardDesc}>Capture. Mutate. Survive. A survival-horror twist on the Pokémon universe — specimen classifications, phase logs, and the full game design breakdown.</p>
+                <span className={styles.pokeHazardCta}>Access Files ↗</span>
+              </div>
+            </div>
           </a>
 
           {/* ── Orator Lab themed card ── */}
