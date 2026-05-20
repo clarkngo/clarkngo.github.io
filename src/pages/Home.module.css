@@ -853,6 +853,151 @@
   box-shadow: 0 0 14px rgba(245, 158, 11, 0.18);
 }
 
+/* ─── LifeWare Card ─── */
+.lifeWareCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(160deg, #040d07 0%, #060f09 100%);
+  border: 1px solid rgba(110, 231, 183, 0.18);
+  border-radius: var(--card-radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #9ecfb4;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  box-shadow: 0 0 0 1px rgba(110, 231, 183, 0.05), 0 18px 60px rgba(4, 30, 14, 0.35);
+}
+
+.lifeWareGlow {
+  position: absolute;
+  top: -40%; right: -5%;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(110, 231, 183, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.lifeWareCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6ee7b7, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lifeWareCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(110, 231, 183, 0.4);
+  box-shadow: 0 0 0 1px rgba(110, 231, 183, 0.12), 0 18px 80px rgba(4, 30, 14, 0.5), 0 0 40px rgba(110, 231, 183, 0.05);
+}
+
+.lifeWareCard:hover::after { opacity: 1; }
+
+.lifeWareInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+/* Breathing orb */
+.lifeWareOrb {
+  flex-shrink: 0;
+  position: relative;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lifeWareDot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6ee7b7;
+  z-index: 1;
+  box-shadow: 0 0 8px rgba(110, 231, 183, 0.6);
+  animation: lifeWareBreathe 4s ease-in-out infinite;
+}
+
+.lifeWareRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(110, 231, 183, 0.45);
+  animation: lifeWareExpand 4s ease-in-out infinite;
+}
+
+.lifeWareRing2 {
+  animation-delay: 2s;
+}
+
+@keyframes lifeWareExpand {
+  0%   { transform: scale(0.4); opacity: 0.7; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+@keyframes lifeWareBreathe {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 8px  rgba(110, 231, 183, 0.6); }
+  50%       { transform: scale(1.35); box-shadow: 0 0 16px rgba(110, 231, 183, 0.9); }
+}
+
+.lifeWareBody { flex: 1; }
+
+.lifeWareBadge {
+  display: inline-block;
+  border: 1px solid rgba(110, 231, 183, 0.28);
+  color: rgba(110, 231, 183, 0.75);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.lifeWareTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d1fae5;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.lifeWareDesc {
+  font-size: 0.95rem;
+  color: #9ecfb4;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.lifeWareCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6ee7b7;
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.lifeWareCard:hover .lifeWareCta {
+  background: rgba(110, 231, 183, 0.07);
+  border-color: rgba(110, 231, 183, 0.6);
+  box-shadow: 0 0 14px rgba(110, 231, 183, 0.15);
+}
+
 @media (max-width: 600px) {
   .hero {
     padding-bottom: 4rem;

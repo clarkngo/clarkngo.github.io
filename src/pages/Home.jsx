@@ -250,6 +250,24 @@ const Home = () => {
             </div>
           </a>
 
+          {/* ── LifeWare themed card ── */}
+          <a href="https://clarkngo.github.io/life-ware" target="_blank" rel="noopener noreferrer" className={styles.lifeWareCard}>
+            <div className={styles.lifeWareGlow} />
+            <div className={styles.lifeWareInner}>
+              <div className={styles.lifeWareOrb}>
+                <span className={styles.lifeWareRing} />
+                <span className={`${styles.lifeWareRing} ${styles.lifeWareRing2}`} />
+                <span className={styles.lifeWareDot} />
+              </div>
+              <div className={styles.lifeWareBody}>
+                <span className={styles.lifeWareBadge}>// SANCTUARY ONLINE //</span>
+                <h3 className={styles.lifeWareTitle}>LifeWare</h3>
+                <p className={styles.lifeWareDesc}>A digital sanctuary for analytical thinkers — mental models, lifestyle frameworks, reflective journals, and wisdom distilled from unexpected places. Slow down. Think deeper.</p>
+                <span className={styles.lifeWareCta}>Enter the Sanctuary ↗</span>
+              </div>
+            </div>
+          </a>
+
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
             {projects.map(({ title, desc, href, cta }) => (
               <div key={title} className={styles.projectCard}>
