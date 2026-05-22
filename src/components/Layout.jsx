@@ -10,7 +10,6 @@ const navLinks = [
   { to: '/research',     label: 'Research' },
   { to: '/volunteer',    label: 'Volunteer' },
   { to: '/workshops',    label: 'Workshops' },
-  { to: '/courses',      label: 'Courses' },
 ];
 
 const Layout = () => {
@@ -52,6 +51,15 @@ const Layout = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="https://clarkngo.github.io/courses/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Courses
+                </a>
+              </li>
               <li>
                 <a
                   href="https://clarkngo.github.io/my-learning-notes/"
