@@ -97,6 +97,15 @@ const Layout = () => {
                 </a>
               </li>
               <li>
+                <a
+                  href="https://clarkngo.github.io/vibe-coding/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Vibe Coding
+                </a>
+              </li>
+              <li>
                 <Link to="/blogs">Blogs</Link>
               </li>
             </ul>
