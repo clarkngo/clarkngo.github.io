@@ -103,6 +103,7 @@ const featuredProjects = [
 const projects = [
   { title: 'The Briefing Room',  desc: 'Curated insights, analyses, and strategic content.',        href: 'https://clarkngo.github.io/the-briefing-room/',  cta: 'View Project' },
   { title: 'AI Hub',             desc: 'A hub for AI projects and resources.',                      href: 'https://clarkngo.github.io/AI-Hub',              cta: 'View Project' },
+  { title: 'Vibe Coding',        desc: 'Exploring vibe coding workflows and experiments.',          href: 'https://clarkngo.github.io/vibe-coding/',        cta: 'View Project' },
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
   { title: 'System Design',      desc: 'System design resources and case studies.',                 href: 'https://clarkngo.github.io/system-design',       cta: 'View Project' },
   { title: 'Agent Development',  desc: 'A project on agent development.',                           href: 'https://clarkngo.github.io/agent-development/',  cta: 'View Project' },
