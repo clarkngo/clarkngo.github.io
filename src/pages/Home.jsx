@@ -111,6 +111,7 @@ const projects = [
   { title: 'My Learning Notes',  desc: 'Personal learning notes and write-ups on tech topics.',    href: 'https://clarkngo.github.io/my-learning-notes/',  cta: 'View Notes' },
   { title: 'Tuklas',             desc: 'A project for Tuklas, which means discovery.',             href: 'https://clarkngo.github.io/tuklas/',             cta: 'View Project' },
   { title: 'Infographics',      desc: 'Visual storytelling through data-driven infographics.',      href: 'https://clarkngo.github.io/infographics/',      cta: 'View Project' },
+  { title: 'Presentations',     desc: 'Slide decks and talks on tech topics.',                     href: 'https://clarkngo.github.io/presentations/',     cta: 'View Project' },
 ];
 
 const hobbies = [
