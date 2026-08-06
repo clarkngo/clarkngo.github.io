@@ -270,6 +270,24 @@ const Home = () => {
             </div>
           </a>
 
+          {/* ── Forward Deployed Game themed card ── */}
+          <a href="https://clarkngo.github.io/forward-deployed-game-web/" target="_blank" rel="noopener noreferrer" className={styles.forwardGameCard}>
+            <div className={styles.forwardGameGlow} />
+            <div className={styles.forwardGameInner}>
+              <div className={styles.forwardGameRadar}>
+                <span className={styles.forwardGameRadarRing} />
+                <span className={`${styles.forwardGameRadarRing} ${styles.forwardGameRadarRing2}`} />
+                <span className={styles.forwardGameRadarDot} />
+              </div>
+              <div className={styles.forwardGameBody}>
+                <span className={styles.forwardGameBadge}>// UNIT DEPLOYED //</span>
+                <h3 className={styles.forwardGameTitle}>Forward Deployed Game</h3>
+                <p className={styles.forwardGameDesc}>A forward-deployed engineering playground — rapid prototypes, tactical builds, and web-based game experiments shipped straight from the field.</p>
+                <span className={styles.forwardGameCta}>Deploy ↗</span>
+              </div>
+            </div>
+          </a>
+
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
             {projects.map(({ title, desc, href, cta }) => (
               <div key={title} className={styles.projectCard}>
