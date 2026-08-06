@@ -1010,6 +1010,151 @@
   box-shadow: 0 0 14px rgba(110, 231, 183, 0.15);
 }
 
+/* ─── Forward Deployed Game Card ─── */
+.forwardGameCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(160deg, #0d0a1f 0%, #100b26 100%);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: var(--card-radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ab9fd1;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.06), 0 18px 60px rgba(30, 15, 70, 0.35);
+}
+
+.forwardGameGlow {
+  position: absolute;
+  top: -40%; right: -5%;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.forwardGameCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #a78bfa, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.forwardGameCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(167, 139, 250, 0.45);
+  box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.16), 0 18px 80px rgba(30, 15, 70, 0.5), 0 0 40px rgba(167, 139, 250, 0.07);
+}
+
+.forwardGameCard:hover::after { opacity: 1; }
+
+.forwardGameInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+/* Targeting reticle */
+.forwardGameRadar {
+  flex-shrink: 0;
+  position: relative;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forwardGameRadarDot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a78bfa;
+  z-index: 1;
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.7);
+  animation: forwardGamePulse 2.4s ease-in-out infinite;
+}
+
+.forwardGameRadarRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(167, 139, 250, 0.5);
+  animation: forwardGameSweep 2.4s ease-out infinite;
+}
+
+.forwardGameRadarRing2 {
+  animation-delay: 1.2s;
+}
+
+@keyframes forwardGameSweep {
+  0%   { transform: scale(0.35); opacity: 0.85; }
+  100% { transform: scale(2.8);  opacity: 0; }
+}
+
+@keyframes forwardGamePulse {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 8px  rgba(167, 139, 250, 0.6); }
+  50%       { transform: scale(1.3); box-shadow: 0 0 16px rgba(167, 139, 250, 0.9); }
+}
+
+.forwardGameBody { flex: 1; }
+
+.forwardGameBadge {
+  display: inline-block;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  color: rgba(167, 139, 250, 0.8);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.forwardGameTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ede9fe;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.forwardGameDesc {
+  font-size: 0.95rem;
+  color: #ab9fd1;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.forwardGameCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #a78bfa;
+  border: 1px solid rgba(167, 139, 250, 0.38);
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.forwardGameCard:hover .forwardGameCta {
+  background: rgba(167, 139, 250, 0.08);
+  border-color: rgba(167, 139, 250, 0.65);
+  box-shadow: 0 0 14px rgba(167, 139, 250, 0.18);
+}
+
 @media (max-width: 600px) {
   .hero {
     padding-bottom: 4rem;
