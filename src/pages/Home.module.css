@@ -1155,6 +1155,145 @@
   box-shadow: 0 0 14px rgba(167, 139, 250, 0.18);
 }
 
+/* ─── Legacy of the Monolith Card ─── */
+.monolithCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(160deg, #140909 0%, #1c0b0b 100%);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: var(--card-radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #c99a9a;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.06), 0 18px 60px rgba(50, 10, 10, 0.35);
+}
+
+.monolithGlow {
+  position: absolute;
+  top: -40%; right: -5%;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.monolithCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #dc2626, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.monolithCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(220, 38, 38, 0.45);
+  box-shadow: 0 0 0 1px rgba(220, 38, 38, 0.16), 0 18px 80px rgba(50, 10, 10, 0.5), 0 0 40px rgba(220, 38, 38, 0.07);
+}
+
+.monolithCard:hover::after { opacity: 1; }
+
+.monolithInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+/* Standing monolith slab with a glowing rune */
+.monolithSlab {
+  flex-shrink: 0;
+  position: relative;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monolithStone {
+  position: relative;
+  width: 1.1rem;
+  height: 2.6rem;
+  border-radius: 3px 3px 2px 2px;
+  background: linear-gradient(180deg, #3a1414 0%, #1c0a0a 100%);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  box-shadow: inset 0 0 8px rgba(220, 38, 38, 0.2);
+}
+
+.monolithRune {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #dc2626;
+  box-shadow: 0 0 8px rgba(220, 38, 38, 0.7);
+  animation: monolithRunePulse 3s ease-in-out infinite;
+}
+
+@keyframes monolithRunePulse {
+  0%, 100% { opacity: 0.55; box-shadow: 0 0 6px  rgba(220, 38, 38, 0.5); }
+  50%       { opacity: 1;    box-shadow: 0 0 18px rgba(220, 38, 38, 0.95); }
+}
+
+.monolithBody { flex: 1; }
+
+.monolithBadge {
+  display: inline-block;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: rgba(220, 38, 38, 0.85);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.monolithTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fee2e2;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.monolithDesc {
+  font-size: 0.95rem;
+  color: #c99a9a;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.monolithCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #dc2626;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.monolithCard:hover .monolithCta {
+  background: rgba(220, 38, 38, 0.08);
+  border-color: rgba(220, 38, 38, 0.65);
+  box-shadow: 0 0 14px rgba(220, 38, 38, 0.18);
+}
+
 @media (max-width: 600px) {
   .hero {
     padding-bottom: 4rem;

@@ -288,6 +288,23 @@ const Home = () => {
             </div>
           </a>
 
+          {/* ── Legacy of the Monolith themed card ── */}
+          <a href="https://clarkngo.github.io/legacy-of-the-monolith-web/" target="_blank" rel="noopener noreferrer" className={styles.monolithCard}>
+            <div className={styles.monolithGlow} />
+            <div className={styles.monolithInner}>
+              <div className={styles.monolithSlab}>
+                <span className={styles.monolithStone} />
+                <span className={styles.monolithRune} />
+              </div>
+              <div className={styles.monolithBody}>
+                <span className={styles.monolithBadge}>// ARTIFACT AWAKENED //</span>
+                <h3 className={styles.monolithTitle}>Legacy of the Monolith</h3>
+                <p className={styles.monolithDesc}>An epic descent into ancient ruins — uncover the secrets of a fallen civilization, awaken the monolith, and claim the legacy carved in stone.</p>
+                <span className={styles.monolithCta}>Enter the Ruins ↗</span>
+              </div>
+            </div>
+          </a>
+
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
             {projects.map(({ title, desc, href, cta }) => (
               <div key={title} className={styles.projectCard}>
