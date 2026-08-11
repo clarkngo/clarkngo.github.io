@@ -3,7 +3,7 @@ import styles from './Professional.module.css';
 
 const professionalExperience = [
   {
-    title: 'AI Engineer',
+    title: 'Student Worker',
     company: 'City University of Seattle, Seattle, WA',
     date: 'Jan 2024 – Present',
     description: [
