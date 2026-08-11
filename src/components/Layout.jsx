@@ -4,7 +4,6 @@ import styles from './Layout.module.css';
 import logo from '../assets/mechanized_flame_wolf_head.png';
 
 const navLinks = [
-  { to: '/proposal',     label: 'Proposal' },
   { to: '/profile',      label: 'Profile' },
   { to: '/professional', label: 'Professional' },
   { to: '/research',     label: 'Research' },
