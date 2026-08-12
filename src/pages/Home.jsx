@@ -108,6 +108,7 @@ const projects = [
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
   { title: 'System Design',      desc: 'System design resources and case studies.',                 href: 'https://clarkngo.github.io/system-design',       cta: 'View Project' },
   { title: 'Agent Development',  desc: 'A project on agent development.',                           href: 'https://clarkngo.github.io/agent-development/',  cta: 'View Project' },
+  { title: 'Agentic Blueprints', desc: 'Design patterns and blueprints for building agentic AI systems.', href: 'https://clarkngo.github.io/agentic-blueprints/', cta: 'View Project' },
   { title: 'Paper Explained',    desc: 'Explaining complex research papers in plain language.',     href: 'https://clarkngo.github.io/paper-explained',     cta: 'View Project' },
   { title: 'My Learning Notes',  desc: 'Personal learning notes and write-ups on tech topics.',    href: 'https://clarkngo.github.io/my-learning-notes/',  cta: 'View Notes' },
   { title: 'Tuklas',             desc: 'A project for Tuklas, which means discovery.',             href: 'https://clarkngo.github.io/tuklas/',             cta: 'View Project' },
