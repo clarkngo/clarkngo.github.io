@@ -2,6 +2,20 @@ import styles from './Workshops.module.css';
 
 const workshops = [
   {
+    title: 'Vibe Coding: Building Software by Collaborating with AI',
+    organization: 'Self-Published Curriculum',
+    date: '2026',
+    link: { url: 'https://clarkngo.github.io/vibe-workshop/', label: 'Explore Workshop Site ↗' },
+    description: [
+      'Designed a four-module workshop curriculum teaching the vibe coding loop: prompt, review, and iterate on real work.',
+      'Module 1 (Foundations) covers the mindset shift behind vibe coding and where it belongs versus where it\'s dangerous.',
+      'Module 2 (Practice) teaches writing prompts that hold up, reading AI output like a reviewer, and iterating without starting over.',
+      'Module 3 (Judgment) addresses when to trust AI output, when to verify it, and what verification means for non-engineers.',
+      'Module 4 (Capstone) has participants build, present, and get critiqued on a small real project using everything from Modules 1-3.',
+      'Includes supporting resources: a facilitator Teaching Guide, a Responsible Use Policy, an Assessment Bank, and a Prompt Cheat Sheet.',
+    ],
+  },
+  {
     title: 'Workshop Instructor: Mobile Full Stack Development',
     organization: 'City University of Seattle, Seattle, WA',
     date: '2025',
@@ -17,7 +31,7 @@ const workshops = [
     title: 'Workshop Instructor: AI Engineer Quickstart: Get Up and Running Fast',
     organization: 'City University of Seattle, Seattle, WA',
     date: '2024',
-    videoLink: 'https://youtu.be/7A5X-vKg66M',
+    link: { url: 'https://youtu.be/7A5X-vKg66M', label: 'Watch Workshop Recording ↗' },
     description: [
       'Delivered a two-day workshop on advanced AI concepts, including Retrieval-Augmented Generation (RAG) and its importance in improving large language model responses.',
       'Explained foundational LLM challenges, emphasizing the value of accurate, current, and reliable information retrieval to enhance user trust.',
@@ -39,7 +53,7 @@ const workshops = [
 ];
 
 const Workshops = () => {
-  const featuredKey = 'Workshop Instructor: AI Engineer Quickstart: Get Up and Running Fast';
+  const featuredKey = 'Vibe Coding: Building Software by Collaborating with AI';
   const featured = workshops.find(w => w.title === featuredKey);
   const others    = workshops.filter(w => w.title !== featuredKey);
 
@@ -61,9 +75,9 @@ const Workshops = () => {
                 {featured.description.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             )}
-            {featured.videoLink && (
-              <a href={featured.videoLink} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                Watch Workshop Recording ↗
+            {featured.link && (
+              <a href={featured.link.url} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                {featured.link.label}
               </a>
             )}
           </div>
@@ -79,6 +93,11 @@ const Workshops = () => {
                 <ul>
                   {exp.description.map((item, j) => <li key={j}>{item}</li>)}
                 </ul>
+              )}
+              {exp.link && (
+                <a href={exp.link.url} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                  {exp.link.label}
+                </a>
               )}
             </li>
           ))}
