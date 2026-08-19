@@ -124,7 +124,7 @@ const learningProjects = [
   { title: 'Presentations',     desc: 'Slide decks and talks on tech topics.',                     href: 'https://clarkngo.github.io/presentations/',     cta: 'View Project' },
 ];
 
-const hobbies = [
+const hobbyProjects = [
   { title: 'Volleyball',   desc: 'A site dedicated to volleyball, my favorite sport.',  href: 'https://clarkngo.github.io/volleyball',   cta: 'View Project' },
   { title: 'Board Games',  desc: 'A personal collection and review of board games.',    href: 'https://clarkngo.github.io/board-games',  cta: 'View Project' },
 ];
@@ -148,7 +148,6 @@ const Home = () => {
   const learningRef = useStaggerReveal('reveal', 0.05);
   const hobbiesRef  = useStaggerReveal('reveal', 0.05);
   const workHeadRef = useScrollReveal('reveal');
-  const hobbyHeadRef = useScrollReveal('reveal');
 
   const [query, setQuery] = useState('');
   const q = query.trim().toLowerCase();
@@ -160,6 +159,7 @@ const Home = () => {
     { label: 'AI & Tools',              items: aiToolsProjects,  ref: aiToolsRef },
     { label: 'Systems & Engineering',   items: systemsProjects,  ref: systemsRef },
     { label: 'Learning & Content',      items: learningProjects, ref: learningRef },
+    { label: 'Hobbies & Interests',     items: hobbyProjects,    ref: hobbiesRef },
   ];
   const filteredCategories = categories.map(c => ({ ...c, filtered: c.items.filter(p => matches(p.title, p.desc)) }));
   const totalMatches = filteredFeatured.length + visibleSpotlightCount + filteredCategories.reduce((n, c) => n + c.filtered.length, 0);
@@ -430,31 +430,6 @@ const Home = () => {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ══ HOBBIES ══ */}
-      <section className={styles.hobbiesSection}>
-        <div className={styles.sectionContainer}>
-          <div ref={hobbyHeadRef} className={styles.sectionHead}>
-            <h2 className={styles.sectionTitle}>
-              Hobbies &amp; <span>Interests</span>
-            </h2>
-            <p className={styles.sectionSub}>Life outside the terminal</p>
-          </div>
-
-          <div ref={hobbiesRef} className={`${styles.hobbiesGrid} stagger`}>
-            {hobbies.map(({ title, desc, href, cta }) => (
-              <div key={title} className={styles.projectCard}>
-                <div className={styles.cardAccent} />
-                <h3>{title}</h3>
-                <p>{desc}</p>
-                <a href={href} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
-                  {cta} <span>→</span>
-                </a>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </div>
