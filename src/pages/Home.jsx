@@ -327,6 +327,24 @@ const Home = () => {
             </div>
           </a>
 
+          {/* ── ScriptedOT themed card ── */}
+          <a href="https://clarkngo.github.io/scripted-ot/" target="_blank" rel="noopener noreferrer" className={styles.scriptedOtCard}>
+            <div className={styles.scriptedOtGlow} />
+            <div className={styles.scriptedOtInner}>
+              <div className={styles.scriptedOtPanel}>
+                <span className={`${styles.scriptedOtLight} ${styles.scriptedOtLight1}`} />
+                <span className={`${styles.scriptedOtLight} ${styles.scriptedOtLight2}`} />
+                <span className={`${styles.scriptedOtLight} ${styles.scriptedOtLight3}`} />
+              </div>
+              <div className={styles.scriptedOtBody}>
+                <span className={styles.scriptedOtBadge}>// CONTROL ROOM LIVE //</span>
+                <h3 className={styles.scriptedOtTitle}>ScriptedOT</h3>
+                <p className={styles.scriptedOtDesc}>Cinematic anchors for OT/ICS security engineering — Chernobyl, Deepwater Horizon, Jurassic Park, and seven more scenes decoded by Purdue Model level, root cause, and IEC 62443 runbook.</p>
+                <span className={styles.scriptedOtCta}>Enter the Control Room ↗</span>
+              </div>
+            </div>
+          </a>
+
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
             {projects.map(({ title, desc, href, cta }) => (
               <div key={title} className={styles.projectCard}>

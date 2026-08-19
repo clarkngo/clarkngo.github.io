@@ -1440,6 +1440,133 @@
   box-shadow: 0 0 14px rgba(99, 102, 241, 0.18);
 }
 
+/* ─── ScriptedOT Card ─── */
+.scriptedOtCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(160deg, #1a0f08 0%, #150c07 100%);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  border-radius: var(--card-radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #d9b8a3;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.06), 0 18px 60px rgba(60, 20, 0, 0.35);
+}
+
+.scriptedOtGlow {
+  position: absolute;
+  top: -40%; right: -5%;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.scriptedOtCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f97316, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.scriptedOtCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(249, 115, 22, 0.45);
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.16), 0 18px 80px rgba(60, 20, 0, 0.5), 0 0 40px rgba(249, 115, 22, 0.07);
+}
+
+.scriptedOtCard:hover::after { opacity: 1; }
+
+.scriptedOtInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+/* Alarm panel — sequenced status lights */
+.scriptedOtPanel {
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.4rem;
+}
+
+.scriptedOtLight {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #f97316;
+  box-shadow: 0 0 6px rgba(249, 115, 22, 0.6);
+  animation: scriptedOtBlink 1.8s ease-in-out infinite;
+}
+
+.scriptedOtLight1 { animation-delay: 0s; }
+.scriptedOtLight2 { animation-delay: 0.3s; }
+.scriptedOtLight3 { animation-delay: 0.6s; }
+
+@keyframes scriptedOtBlink {
+  0%, 100% { opacity: 0.35; box-shadow: 0 0 6px rgba(249, 115, 22, 0.3); }
+  50%       { opacity: 1;    box-shadow: 0 0 12px rgba(249, 115, 22, 0.9); }
+}
+
+.scriptedOtBody { flex: 1; }
+
+.scriptedOtBadge {
+  display: inline-block;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  color: rgba(249, 115, 22, 0.85);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.scriptedOtTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fed7aa;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.scriptedOtDesc {
+  font-size: 0.95rem;
+  color: #d9b8a3;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.scriptedOtCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fb923c;
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.scriptedOtCard:hover .scriptedOtCta {
+  background: rgba(249, 115, 22, 0.08);
+  border-color: rgba(249, 115, 22, 0.65);
+  box-shadow: 0 0 14px rgba(249, 115, 22, 0.18);
+}
+
 @media (max-width: 600px) {
   .hero {
     padding-bottom: 4rem;
