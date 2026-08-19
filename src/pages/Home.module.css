@@ -250,6 +250,75 @@
   color: var(--gray-500);
 }
 
+/* ─── Search ─── */
+.searchWrap {
+  position: relative;
+  max-width: 460px;
+  margin: 1.75rem auto 0;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: var(--gray-400);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  font-size: 0.95rem;
+  color: var(--gray-900);
+  background: #fff;
+  border: 1px solid var(--gray-200);
+  border-radius: 999px;
+  padding: 0.75rem 2.75rem 0.75rem 2.75rem;
+  transition: border-color var(--ease-fast), box-shadow var(--ease-fast);
+}
+
+.searchInput::placeholder {
+  color: var(--gray-400);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--purple-core);
+  box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.14);
+}
+
+.searchClear {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--gray-100);
+  color: var(--gray-500);
+  font-size: 1.1rem;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  transition: background var(--ease-fast), color var(--ease-fast);
+}
+
+.searchClear:hover {
+  background: var(--gray-200);
+  color: var(--gray-900);
+}
+
+.noResults {
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
 /* ─── Featured Grid ─── */
 .featuredGrid {
   display: grid;
@@ -347,6 +416,44 @@
 .featuredCard:hover .featuredCta {
   background: rgba(255,255,255,0.2);
   border-color: rgba(255,255,255,0.4);
+}
+
+/* ─── Spotlight (themed cards) grid ─── */
+.spotlightGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.spotlightGrid > a {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .spotlightGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Project categories ─── */
+.categoryGroup {
+  margin-bottom: 2.75rem;
+}
+
+.categoryGroup:last-child {
+  margin-bottom: 0;
+}
+
+.categoryLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--gray-200);
 }
 
 /* ─── Cards ─── */
