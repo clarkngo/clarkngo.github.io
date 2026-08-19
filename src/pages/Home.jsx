@@ -307,6 +307,26 @@ const Home = () => {
             </div>
           </a>
 
+          {/* ── System Design RPG themed card ── */}
+          <a href="https://clarkngo.github.io/sysdesign-rpg/" target="_blank" rel="noopener noreferrer" className={styles.sysRpgCard}>
+            <div className={styles.sysRpgGlow} />
+            <div className={styles.sysRpgInner}>
+              <div className={styles.sysRpgTree}>
+                <span className={`${styles.sysRpgNode} ${styles.sysRpgNode1}`} />
+                <span className={`${styles.sysRpgNode} ${styles.sysRpgNode2}`} />
+                <span className={`${styles.sysRpgNode} ${styles.sysRpgNode3}`} />
+                <span className={styles.sysRpgLink1} />
+                <span className={styles.sysRpgLink2} />
+              </div>
+              <div className={styles.sysRpgBody}>
+                <span className={styles.sysRpgBadge}>// QUEST ACTIVE //</span>
+                <h3 className={styles.sysRpgTitle}>System Design RPG</h3>
+                <p className={styles.sysRpgDesc}>A turn-based RPG that teaches system design — build architecture, battle scaling bosses, and level up your skills as an engineer.</p>
+                <span className={styles.sysRpgCta}>Level Up ↗</span>
+              </div>
+            </div>
+          </a>
+
           <div ref={projectsRef} className={`${styles.projectGrid} stagger`}>
             {projects.map(({ title, desc, href, cta }) => (
               <div key={title} className={styles.projectCard}>
