@@ -1294,6 +1294,152 @@
   box-shadow: 0 0 14px rgba(220, 38, 38, 0.18);
 }
 
+/* ─── System Design RPG Card ─── */
+.sysRpgCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(160deg, #0a0a1f 0%, #0d0c26 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--card-radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #a5a3d9;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.06), 0 18px 60px rgba(15, 15, 60, 0.35);
+}
+
+.sysRpgGlow {
+  position: absolute;
+  top: -40%; right: -5%;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sysRpgCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6366f1, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sysRpgCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.16), 0 18px 80px rgba(15, 15, 60, 0.5), 0 0 40px rgba(99, 102, 241, 0.07);
+}
+
+.sysRpgCard:hover::after { opacity: 1; }
+
+.sysRpgInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+/* Skill-tree node network */
+.sysRpgTree {
+  flex-shrink: 0;
+  position: relative;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.sysRpgLink1,
+.sysRpgLink2 {
+  position: absolute;
+  top: 6px;
+  left: 22px;
+  width: 36px;
+  height: 2px;
+  background: rgba(99, 102, 241, 0.4);
+  transform-origin: 0 50%;
+}
+
+.sysRpgLink1 { transform: rotate(113.6deg); }
+.sysRpgLink2 { transform: rotate(66.1deg); }
+
+.sysRpgNode {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6366f1;
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.6);
+}
+
+.sysRpgNode1 {
+  top: 2px;
+  left: 19px;
+  animation: sysRpgLevelUp 2.2s ease-in-out infinite;
+}
+
+.sysRpgNode2 { top: 35.5px; left: 4.5px; }
+.sysRpgNode3 { top: 35.5px; left: 33.5px; }
+
+@keyframes sysRpgLevelUp {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 6px  rgba(99, 102, 241, 0.6); }
+  50%       { transform: scale(1.4); box-shadow: 0 0 16px rgba(99, 102, 241, 0.95); }
+}
+
+.sysRpgBody { flex: 1; }
+
+.sysRpgBadge {
+  display: inline-block;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: rgba(99, 102, 241, 0.85);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.sysRpgTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e0e7ff;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.sysRpgDesc {
+  font-size: 0.95rem;
+  color: #a5a3d9;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.sysRpgCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.sysRpgCard:hover .sysRpgCta {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.65);
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.18);
+}
+
 @media (max-width: 600px) {
   .hero {
     padding-bottom: 4rem;
