@@ -4,7 +4,6 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Professional from './pages/Professional';
 import Courses from './pages/Courses';
-import Research from './pages/Research';
 import Proposal from './pages/Proposal';
 import Volunteer from './pages/Volunteer';
 import Workshops from './pages/Workshops';
@@ -26,6 +25,13 @@ const NotesRedirect = () => {
   return null;
 };
 
+const ResearchRedirect = () => {
+  useEffect(() => {
+    window.location.href = 'https://clarkngo.github.io/research';
+  }, []);
+  return null;
+};
+
 const router = createHashRouter([
   {
     path: '/',
@@ -36,7 +42,7 @@ const router = createHashRouter([
       { path: 'profile', element: <Profile /> },
       { path: 'blogs', element: <BlogsRedirect /> },
       { path: 'courses', element: <Courses /> },
-      { path: 'research', element: <Research /> },
+      { path: 'research', element: <ResearchRedirect /> },
       { path: 'mentor', element: <Mentor /> },
       { path: 'proposal', element: <Proposal /> },
       { path: 'volunteer', element: <Volunteer /> },
