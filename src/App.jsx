@@ -9,6 +9,7 @@ import Volunteer from './pages/Volunteer';
 import Workshops from './pages/Workshops';
 import Profile from './pages/Profile';
 import Mentor from './pages/Mentor';
+import Maritime from './pages/Maritime';
 
 const BlogsRedirect = () => {
   useEffect(() => {
@@ -48,6 +49,7 @@ const router = createHashRouter([
       { path: 'volunteer', element: <Volunteer /> },
       { path: 'workshops', element: <Workshops /> },
       { path: 'notes', element: <NotesRedirect /> },
+      { path: 'maritime', element: <Maritime /> },
     ],
   },
 ]);

@@ -9,6 +9,7 @@ const navLinks = [
   { to: '/research',     label: 'Research' },
   { to: '/volunteer',    label: 'Volunteer' },
   { to: '/workshops',    label: 'Workshops' },
+  { to: '/maritime',     label: 'Maritime' },
 ];
 
 const Layout = () => {

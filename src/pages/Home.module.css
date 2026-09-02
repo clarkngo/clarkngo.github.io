@@ -1661,6 +1661,135 @@
   box-shadow: 0 0 14px rgba(249, 115, 22, 0.18);
 }
 
+/* ── Maritime spotlight card ── */
+.maritimeCard {
+  display: block;
+  position: relative;
+  background: linear-gradient(160deg, #04101c 0%, #071c2e 100%);
+  border: 1px solid rgba(8, 145, 178, 0.22);
+  border-radius: var(--card-radius);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #a5d8e6;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--ease-base), box-shadow var(--ease-base), border-color var(--ease-base);
+  box-shadow: 0 0 0 1px rgba(8, 145, 178, 0.06), 0 18px 60px rgba(2, 20, 35, 0.4);
+}
+
+.maritimeGlow {
+  position: absolute;
+  bottom: -35%; left: -5%;
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.maritimeCard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.maritimeCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(8, 145, 178, 0.5);
+  box-shadow: 0 0 0 1px rgba(8, 145, 178, 0.18), 0 18px 80px rgba(2, 20, 35, 0.55), 0 0 40px rgba(34, 211, 238, 0.08);
+}
+
+.maritimeCard:hover::after { opacity: 1; }
+
+.maritimeInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+/* Ripple — layered swell lines */
+.maritimeWaves {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.5rem;
+  width: 34px;
+}
+
+.maritimeWave {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  background: #22d3ee;
+  box-shadow: 0 0 6px rgba(34, 211, 238, 0.6);
+  animation: maritimeSwell 2.4s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+.maritimeWave2 { width: 70%; animation-delay: 0.25s; }
+.maritimeWave3 { width: 45%; animation-delay: 0.5s; }
+
+@keyframes maritimeSwell {
+  0%, 100% { transform: scaleX(0.6); opacity: 0.4; }
+  50%       { transform: scaleX(1);   opacity: 1; }
+}
+
+.maritimeBody { flex: 1; }
+
+.maritimeBadge {
+  display: inline-block;
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: rgba(34, 211, 238, 0.85);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  margin-bottom: 0.65rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.maritimeTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #bae6fd;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.03em;
+}
+
+.maritimeDesc {
+  font-size: 0.95rem;
+  color: #a5d8e6;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.maritimeCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #67e8f9;
+  border: 1px solid rgba(34, 211, 238, 0.4);
+  padding: 0.45rem 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.maritimeCard:hover .maritimeCta {
+  background: rgba(34, 211, 238, 0.08);
+  border-color: rgba(34, 211, 238, 0.65);
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.18);
+}
+
 @media (max-width: 600px) {
   .hero {
     padding-bottom: 4rem;
