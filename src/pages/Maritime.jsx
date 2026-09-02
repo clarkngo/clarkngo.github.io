@@ -9,6 +9,12 @@ const resources = [
     cta: 'Explore Fundamentals',
   },
   {
+    title: 'Maritime Atlas',
+    desc: 'A visual atlas of the maritime world — shipping lanes, port systems, and vessel classifications mapped out for quick reference.',
+    href: 'https://clarkngo.github.io/maritime-atlas/',
+    cta: 'Browse the Atlas',
+  },
+  {
     title: 'Maritime OT',
     desc: 'Operational technology aboard ships — ECDIS, engine control systems, and the ICS/OT security lens applied at sea.',
     href: 'https://clarkngo.github.io/maritime-ot/',
