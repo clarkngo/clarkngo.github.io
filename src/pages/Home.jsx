@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useStaggerReveal, useScrollReveal } from '../hooks/useScrollReveal';
 import styles from './Home.module.css';
 import heroImage from '../assets/hero_clark_frieren.png';
@@ -139,6 +140,7 @@ const spotlightMeta = {
   monolith:    { title: 'Legacy of the Monolith',   desc: 'An epic descent into ancient ruins — uncover the secrets of a fallen civilization, awaken the monolith, and claim the legacy carved in stone.' },
   sysRpg:      { title: 'System Design RPG',        desc: 'A turn-based RPG that teaches system design — build architecture, battle scaling bosses, and level up your skills as an engineer.' },
   scriptedOt:  { title: 'ScriptedOT',               desc: 'Cinematic anchors for OT/ICS security engineering — Chernobyl, Deepwater Horizon, Jurassic Park, and seven more scenes decoded by Purdue Model level, root cause, and IEC 62443 runbook.' },
+  maritime:    { title: 'Maritime',                 desc: 'Fundamentals, operational technology, and Physical AI at sea — vessel systems, ECDIS and engine control, and autonomous maritime robotics.' },
 };
 
 /* ── Component ── */
@@ -410,6 +412,24 @@ const Home = () => {
                   </div>
                 </div>
               </a>
+            )}
+            {matches(spotlightMeta.maritime.title, spotlightMeta.maritime.desc) && (
+              <Link to="/maritime" className={styles.maritimeCard}>
+                <div className={styles.maritimeGlow} />
+                <div className={styles.maritimeInner}>
+                  <div className={styles.maritimeWaves}>
+                    <span className={styles.maritimeWave} />
+                    <span className={`${styles.maritimeWave} ${styles.maritimeWave2}`} />
+                    <span className={`${styles.maritimeWave} ${styles.maritimeWave3}`} />
+                  </div>
+                  <div className={styles.maritimeBody}>
+                    <span className={styles.maritimeBadge}>// VESSEL SYSTEMS ONLINE //</span>
+                    <h3 className={styles.maritimeTitle}>Maritime</h3>
+                    <p className={styles.maritimeDesc}>{spotlightMeta.maritime.desc}</p>
+                    <span className={styles.maritimeCta}>Chart a Course ↗</span>
+                  </div>
+                </div>
+              </Link>
             )}
           </div>
 
