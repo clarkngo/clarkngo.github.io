@@ -33,6 +33,12 @@ const resources = [
     cta: 'Explore Operations',
   },
   {
+    title: 'WA Maritime: Case Studies',
+    desc: 'Five sourced case studies on the economics of Washington State maritime — port competitiveness vs. Vancouver, the 2021–22 congestion crisis, the WA Ferries funding crunch, pilotage economics, and a Port of Seattle cyber incident.',
+    href: 'https://clarkngo.github.io/maritime-operations/#case-studies',
+    cta: 'Read the Case Studies',
+  },
+  {
     title: 'Physical AI: Maritime',
     desc: 'Where Physical AI meets the sea — autonomous vessels, maritime robotics, and embodied AI research on the water.',
     href: 'https://clarkngo.github.io/physical-ai/#/maritime',
