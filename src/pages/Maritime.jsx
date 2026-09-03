@@ -21,6 +21,12 @@ const resources = [
     cta: 'Explore Maritime OT',
   },
   {
+    title: 'Maritime Operations',
+    desc: 'Process flow, organizational structure, and job roles across Washington State maritime operations — from vessel arrival to port to career map.',
+    href: 'https://clarkngo.github.io/maritime-operations/',
+    cta: 'Explore Operations',
+  },
+  {
     title: 'Physical AI: Maritime',
     desc: 'Where Physical AI meets the sea — autonomous vessels, maritime robotics, and embodied AI research on the water.',
     href: 'https://clarkngo.github.io/physical-ai/#/maritime',
