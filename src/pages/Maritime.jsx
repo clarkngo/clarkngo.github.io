@@ -3,6 +3,12 @@ import styles from './Maritime.module.css';
 
 const resources = [
   {
+    title: 'Maritime & Shipping Primer',
+    desc: 'A deep-dive primer on global ocean freight economics — container shipping, major carriers, market dynamics, and the failure modes that disrupt world trade.',
+    href: 'https://clarkngo.github.io/playground/primer/industry/maritime/index.html',
+    cta: 'Read the Primer',
+  },
+  {
     title: 'Maritime Fundamentals',
     desc: 'Core maritime concepts explained from the ground up — vessel types, navigation, ports, and shipping operations.',
     href: 'https://clarkngo.github.io/maritime-fundamentals/',
