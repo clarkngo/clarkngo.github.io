@@ -19,6 +19,11 @@
           location.replace(toResearch);
           return;
         }
+        var toMaritime = 'https://clarkngo.github.io/maritime/';
+        if (hash.indexOf('#/maritime') === 0 || path === '/maritime' || path.indexOf('/maritime/') === 0) {
+          location.replace(toMaritime);
+          return;
+        }
         // default: go to root (let SPA router handle other routes)
         location.replace('/');
       })();

@@ -9,7 +9,6 @@ import Volunteer from './pages/Volunteer';
 import Workshops from './pages/Workshops';
 import Profile from './pages/Profile';
 import Mentor from './pages/Mentor';
-import Maritime from './pages/Maritime';
 
 const BlogsRedirect = () => {
   useEffect(() => {
@@ -33,6 +32,13 @@ const ResearchRedirect = () => {
   return null;
 };
 
+const MaritimeRedirect = () => {
+  useEffect(() => {
+    window.location.href = 'https://clarkngo.github.io/maritime/';
+  }, []);
+  return null;
+};
+
 const router = createHashRouter([
   {
     path: '/',
@@ -49,7 +55,7 @@ const router = createHashRouter([
       { path: 'volunteer', element: <Volunteer /> },
       { path: 'workshops', element: <Workshops /> },
       { path: 'notes', element: <NotesRedirect /> },
-      { path: 'maritime', element: <Maritime /> },
+      { path: 'maritime', element: <MaritimeRedirect /> },
     ],
   },
 ]);
