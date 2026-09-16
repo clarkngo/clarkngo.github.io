@@ -101,6 +101,77 @@
   background: rgba(106, 17, 203, 0.45);
 }
 
+/* ─── Nav dropdown groups ─── */
+.navGroup {
+  position: relative;
+}
+
+.navGroupToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: color var(--ease-fast), background var(--ease-fast);
+}
+
+.navGroupToggle:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navGroupToggle.active {
+  color: #fff;
+  background: rgba(106, 17, 203, 0.45);
+}
+
+.caret {
+  transition: transform 0.2s ease;
+}
+
+.caretOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem;
+  background: rgba(15, 7, 32, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(106, 17, 203, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdownOpen {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown a {
+  white-space: nowrap;
+}
+
 /* ─── Hamburger ─── */
 .hamburger {
   display: none;
@@ -214,6 +285,38 @@
     padding: 0.75rem 1rem;
     font-size: 1rem;
     border-radius: 10px;
+  }
+
+  .navGroupToggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .dropdown {
+    position: static;
+    min-width: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .dropdownOpen {
+    max-height: 480px;
+    padding: 0.25rem 0 0.5rem;
+  }
+
+  .dropdown a {
+    padding-left: 2rem;
   }
 
   .logo span {
