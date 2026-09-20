@@ -29,14 +29,15 @@ const professionalExperience = [
     company: 'eBay Inc., San Jose, CA',
     date: 'Aug 2021 – Sep 2023',
     description: [
-      'Reduced mean time to identify root cause related to site-impacting changes to advertising platform from 1 minute to 10 seconds.',
+      'Integrated code deployment and EP change information from ServiceNow into Control Center, significantly reducing the time to identify likely causes of revenue or metric drops. Correlating an issue with recent changes previously could take hours in some cases; with change information in Control Center, recent changes surfaced within 10 minutes, and sometimes within seconds depending on the polling cycle.',
       'Continuously delivered features for experiment metadata enhancement project (team of 5) to enhance A/B testing monitoring.',
       'Analyzed business metrics data inaccuracies (revenue, clicks, impressions) and worked with teams to correct the data.',
       'Involved in batch processing using Spring Batch to extract data from ServiceNow and other internal APIs into Elasticsearch.',
-      'Designed Spring Boot microservices to decouple logic from existing monolithic applications.',
+      'Reduced code duplication from approximately 20% to approximately 5% by designing Spring Boot microservices and shared libraries to decouple logic from existing monolithic applications.',
       'Developed table view, search function, and validation rules to show changes metadata with React and Ant Design.',
       'Configured CI/CD with Jenkins and eBay auto deployment tool.',
-      'Performed on-call work and Root Cause Analysis (RCA) via Slack alerts, Grafana, and other monitoring systems.',
+      'Participated in the on-call rotation and responded to production incidents affecting advertising systems, where timely response mitigated potential revenue impact and protected the customer experience. Performed Root Cause Analysis (RCA) via Slack alerts, Grafana, and other monitoring systems.',
+      'Contributed to an API-based application for managing large Elasticsearch, and later OpenSearch, clusters, including consolidating or splitting index data to improve performance and operational efficiency.',
     ],
   },
   {
