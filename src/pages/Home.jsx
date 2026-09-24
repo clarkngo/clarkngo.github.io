@@ -108,7 +108,8 @@ const aiToolsProjects = [
   { title: 'Agent Development',   desc: 'A project on agent development.',                                   href: 'https://clarkngo.github.io/agent-development/',      cta: 'View Project' },
   { title: 'Agentic Blueprints',  desc: 'Design patterns and blueprints for building agentic AI systems.',   href: 'https://clarkngo.github.io/agentic-blueprints/',     cta: 'View Project' },
   { title: 'Vibe Coding',         desc: 'Exploring vibe coding workflows and experiments.',                  href: 'https://clarkngo.github.io/vibe-coding/',            cta: 'View Project' },
-  { title: 'Problem Atlas',       desc: 'An interactive map from industry to role to task scenario, ending in a diagnosis of AI, process, automation, or requirements-gap solutions.', href: 'https://clarkngo.github.io/problem-atlas/', cta: 'View Atlas' },
+  { title: 'Site Blueprint',      desc: 'A catalog of sites and pages as flip cards, each with a rebuild prompt, plus a generator for a master prompt for a new site.', href: 'https://clarkngo.github.io/site-blueprint/', cta: 'View Project' },
+  { title: 'Problem Atlas',      desc: 'An interactive map from industry to role to task scenario, ending in a diagnosis of AI, process, automation, or requirements-gap solutions.', href: 'https://clarkngo.github.io/problem-atlas/', cta: 'View Atlas' },
 ];
 
 const systemsProjects = [
@@ -124,6 +125,7 @@ const learningProjects = [
   { title: 'Tuklas',             desc: 'A project for Tuklas, which means discovery.',             href: 'https://clarkngo.github.io/tuklas/',             cta: 'View Project' },
   { title: 'Infographics',      desc: 'Visual storytelling through data-driven infographics.',      href: 'https://clarkngo.github.io/infographics/',      cta: 'View Project' },
   { title: 'Presentations',     desc: 'Slide decks and talks on tech topics.',                     href: 'https://clarkngo.github.io/presentations/',     cta: 'View Project' },
+  { title: 'Color Communication', desc: 'A private, in-browser assessment of your communication blend, plus practice shaping the same message for blue, green, yellow, and red preferences.', href: 'https://clarkngo.github.io/color-communication/', cta: 'View Project' },
   { title: 'First Responders',  desc: 'Duty Board — a curated resource hub for fire, EMS, and police: training, wellness support, field standards, and agency directories.', href: 'https://clarkngo.github.io/first-responders/', cta: 'View Duty Board' },
 ];
 
