@@ -130,6 +130,7 @@ const learningProjects = [
   { title: 'Infographics',      desc: 'Visual storytelling through data-driven infographics.',      href: 'https://clarkngo.github.io/infographics/',      cta: 'View Project' },
   { title: 'Presentations',     desc: 'Slide decks and talks on tech topics.',                     href: 'https://clarkngo.github.io/presentations/',     cta: 'View Project' },
   { title: 'Color Communication', desc: 'A private, in-browser assessment of your communication blend, plus practice shaping the same message for blue, green, yellow, and red preferences.', href: 'https://clarkngo.github.io/color-communication/', cta: 'View Project' },
+  { title: 'Ebooks',            desc: 'Original fiction. Pick a title and read it online, no signup required.', href: 'https://clarkngo.github.io/ebooks/', cta: 'View Shelf' },
   { title: 'First Responders',  desc: 'Duty Board — a curated resource hub for fire, EMS, and police: training, wellness support, field standards, and agency directories.', href: 'https://clarkngo.github.io/first-responders/', cta: 'View Duty Board' },
 ];
 
