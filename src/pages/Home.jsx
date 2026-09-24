@@ -111,12 +111,14 @@ const aiToolsProjects = [
   { title: 'Vibe Coding',         desc: 'Exploring vibe coding workflows and experiments.',                  href: 'https://clarkngo.github.io/vibe-coding/',            cta: 'View Project' },
   { title: 'Scaling for AI Safety', desc: 'Beginner-friendly working prototypes for multi-agent AI safety: a testbed that runs simulated agents, and a pipeline that evaluates their logs.', href: 'https://clarkngo.github.io/scaling-for-ai-safety/', cta: 'View Project' },
   { title: 'Site Blueprint',     desc: 'A catalog of sites and pages as flip cards, each with a rebuild prompt, plus a generator for a master prompt for a new site.', href: 'https://clarkngo.github.io/site-blueprint/', cta: 'View Project' },
-  { title: 'Problem Atlas',      desc: 'An interactive map from industry to role to task scenario, ending in a diagnosis of AI, process, automation, or requirements-gap solutions.', href: 'https://clarkngo.github.io/problem-atlas/', cta: 'View Atlas' },
+  { title: 'AI Security Atlas',  desc: 'An interactive threat modeling map from adversarial vectors through vulnerabilities to guardrails, covering agentic MCP workflows, RAG pipelines, and LLM application defense.', href: 'https://clarkngo.github.io/ai-sec-atlas/', cta: 'View Atlas' },
+  { title: 'Problem Atlas',     desc: 'An interactive map from industry to role to task scenario, ending in a diagnosis of AI, process, automation, or requirements-gap solutions.', href: 'https://clarkngo.github.io/problem-atlas/', cta: 'View Atlas' },
 ];
 
 const systemsProjects = [
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
   { title: 'System Design',      desc: 'System design resources and case studies.',                 href: 'https://clarkngo.github.io/system-design',       cta: 'View Project' },
+  { title: 'System Design Atlas', desc: 'Walk challenges, solutions, and blockers for common scale scenarios.', href: 'https://clarkngo.github.io/sysdesign-atlas/', cta: 'View Atlas' },
   { title: 'Paper Explained',    desc: 'Explaining complex research papers in plain language.',     href: 'https://clarkngo.github.io/paper-explained',     cta: 'View Project' },
 ];
 
