@@ -108,6 +108,7 @@ const aiToolsProjects = [
   { title: 'Agent Development',   desc: 'A project on agent development.',                                   href: 'https://clarkngo.github.io/agent-development/',      cta: 'View Project' },
   { title: 'Agentic Blueprints',  desc: 'Design patterns and blueprints for building agentic AI systems.',   href: 'https://clarkngo.github.io/agentic-blueprints/',     cta: 'View Project' },
   { title: 'Vibe Coding',         desc: 'Exploring vibe coding workflows and experiments.',                  href: 'https://clarkngo.github.io/vibe-coding/',            cta: 'View Project' },
+  { title: 'Problem Atlas',       desc: 'An interactive map from industry to role to task scenario, ending in a diagnosis of AI, process, automation, or requirements-gap solutions.', href: 'https://clarkngo.github.io/problem-atlas/', cta: 'View Atlas' },
 ];
 
 const systemsProjects = [
