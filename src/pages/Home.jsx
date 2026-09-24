@@ -108,7 +108,8 @@ const aiToolsProjects = [
   { title: 'Agent Development',   desc: 'A project on agent development.',                                   href: 'https://clarkngo.github.io/agent-development/',      cta: 'View Project' },
   { title: 'Agentic Blueprints',  desc: 'Design patterns and blueprints for building agentic AI systems.',   href: 'https://clarkngo.github.io/agentic-blueprints/',     cta: 'View Project' },
   { title: 'Vibe Coding',         desc: 'Exploring vibe coding workflows and experiments.',                  href: 'https://clarkngo.github.io/vibe-coding/',            cta: 'View Project' },
-  { title: 'Site Blueprint',      desc: 'A catalog of sites and pages as flip cards, each with a rebuild prompt, plus a generator for a master prompt for a new site.', href: 'https://clarkngo.github.io/site-blueprint/', cta: 'View Project' },
+  { title: 'Scaling for AI Safety', desc: 'Beginner-friendly working prototypes for multi-agent AI safety: a testbed that runs simulated agents, and a pipeline that evaluates their logs.', href: 'https://clarkngo.github.io/scaling-for-ai-safety/', cta: 'View Project' },
+  { title: 'Site Blueprint',     desc: 'A catalog of sites and pages as flip cards, each with a rebuild prompt, plus a generator for a master prompt for a new site.', href: 'https://clarkngo.github.io/site-blueprint/', cta: 'View Project' },
   { title: 'Problem Atlas',      desc: 'An interactive map from industry to role to task scenario, ending in a diagnosis of AI, process, automation, or requirements-gap solutions.', href: 'https://clarkngo.github.io/problem-atlas/', cta: 'View Atlas' },
 ];
 
@@ -132,6 +133,7 @@ const learningProjects = [
 const hobbyProjects = [
   { title: 'Volleyball',   desc: 'A site dedicated to volleyball, my favorite sport.',  href: 'https://clarkngo.github.io/volleyball',   cta: 'View Project' },
   { title: 'Board Games',  desc: 'A personal collection and review of board games.',    href: 'https://clarkngo.github.io/board-games',  cta: 'View Project' },
+  { title: 'Workouts',     desc: 'A floor reference for cable walks, plyometrics, foam rolling, explosiveness, medicine-ball hip work, and kettlebells.', href: 'https://clarkngo.github.io/workouts/', cta: 'View Project' },
 ];
 
 /* metadata for the bespoke themed cards below, used only for search matching */
