@@ -46,6 +46,8 @@ export const learningProjects = [
   { title: 'Color Communication', desc: 'A private, in-browser assessment of your communication blend, plus practice shaping the same message for blue, green, yellow, and red preferences.', href: 'https://clarkngo.github.io/color-communication/', cta: 'View Project' },
   { title: 'Ebooks',            desc: 'Original fiction. Pick a title and read it online, no signup required.', href: 'https://clarkngo.github.io/ebooks/', cta: 'View Shelf' },
   { title: 'First Responders',  desc: 'Duty Board — a curated resource hub for fire, EMS, and police: training, wellness support, field standards, and agency directories.', href: 'https://clarkngo.github.io/first-responders/', cta: 'View Duty Board' },
+  { title: 'Wok & Talk',        desc: 'Learn restaurant Mandarin by eating your way through Chinese restaurants.', href: 'https://clarkngo.github.io/wok-and-talk/', cta: 'View Project' },
+  { title: 'MathMatrix AI',     desc: 'A 10-module, AI-assisted interactive course on the math behind data science: linear algebra, calculus, probability, and optimization.', href: 'https://clarkngo.github.io/math-matrix-ai/', cta: 'View Course' },
 ];
 
 export const hobbyProjects = [
