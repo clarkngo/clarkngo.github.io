@@ -19,6 +19,7 @@ const navGroups = [
       { to: '/volunteer',    label: 'Volunteer' },
       { to: '/workshops',    label: 'Workshops' },
       { to: '/maritime',     label: 'Maritime' },
+      { href: 'https://clarkngo.github.io/experience-vault/', label: 'Experience Vault' },
     ],
   },
   {

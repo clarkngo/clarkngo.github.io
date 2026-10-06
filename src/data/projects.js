@@ -16,6 +16,7 @@ export const featuredProjects = [
 
 export const aiToolsProjects = [
   { title: 'AI Hub',              desc: 'A hub for AI projects and resources.',                              href: 'https://clarkngo.github.io/AI-Hub',                  cta: 'View Project' },
+  { title: 'Applied AI Field Guide', desc: 'A practical field guide to using AI with good judgment in real business and teaching work.', href: 'https://clarkngo.github.io/applied-ai-field-guide/', cta: 'View Guide' },
   { title: 'AI Educator Showcase',desc: 'A curated flip-card tour of my sites and tools, framed for educators exploring what\'s possible with AI.', href: 'https://clarkngo.github.io/ai-educator-showcase/', cta: 'View Showcase' },
   { title: 'Prompt Builder',      desc: 'Build, refine, and manage effective prompts.',                      href: 'https://clarkngo.github.io/prompt-builder',          cta: 'View Project' },
   { title: 'Agent Development',   desc: 'A project on agent development.',                                   href: 'https://clarkngo.github.io/agent-development/',      cta: 'View Project' },
