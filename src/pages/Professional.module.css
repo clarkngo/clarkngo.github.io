@@ -141,6 +141,19 @@
   top: 0.25rem;
 }
 
+.projectLink {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--purple-core);
+  text-decoration: none;
+}
+
+.projectLink:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 640px) {
   .timeline {
     padding-left: 1.25rem;
