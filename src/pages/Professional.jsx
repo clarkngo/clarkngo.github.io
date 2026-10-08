@@ -28,6 +28,7 @@ const professionalExperience = [
     title: 'Software Engineer II',
     company: 'eBay Inc., San Jose, CA',
     date: 'Aug 2021 – Sep 2023',
+    link: { href: 'https://clarkngo.github.io/change-radar/', label: 'See Change Radar — a demo of the change-correlation app I built features for' },
     description: [
       'Integrated code deployment and EP change information from ServiceNow into Control Center, significantly reducing the time to identify likely causes of revenue or metric drops. Correlating an issue with recent changes previously could take hours in some cases; with change information in Control Center, recent changes surfaced within 10 minutes, and sometimes within seconds depending on the polling cycle.',
       'Continuously delivered features for experiment metadata enhancement project (team of 5) to enhance A/B testing monitoring.',
@@ -87,6 +88,11 @@ const Professional = () => {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
+              {exp.link && (
+                <a className={styles.projectLink} href={exp.link.href} target="_blank" rel="noopener noreferrer">
+                  {exp.link.label} →
+                </a>
+              )}
             </div>
           ))}
         </div>

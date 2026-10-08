@@ -33,6 +33,7 @@ export const systemsProjects = [
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
   { title: 'System Design',      desc: 'System design resources and case studies.',                 href: 'https://clarkngo.github.io/system-design',       cta: 'View Project' },
   { title: 'System Design Atlas', desc: 'Walk challenges, solutions, and blockers for common scale scenarios.', href: 'https://clarkngo.github.io/sysdesign-atlas/', cta: 'View Atlas' },
+  { title: 'Change Radar',       desc: 'Correlate alerts with recent deploys, config changes, and feature-flag flips — inspired by the change-tracking app I built features for at eBay.', href: 'https://clarkngo.github.io/change-radar/', cta: 'View Project' },
   { title: 'Paper Explained',    desc: 'Explaining complex research papers in plain language.',     href: 'https://clarkngo.github.io/paper-explained',     cta: 'View Project' },
 ];
 
