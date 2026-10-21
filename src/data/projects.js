@@ -31,8 +31,9 @@ export const aiToolsProjects = [
 
 export const systemsProjects = [
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
-  { title: 'System Design',      desc: 'System design resources and case studies.',                 href: 'https://clarkngo.github.io/system-design',       cta: 'View Project' },
+  { title: 'System Design Field Training', desc: 'Learn system design by living through it — 10 interactive incidents based on real postmortems from GitHub, AWS, Cloudflare, and more.', href: 'https://clarkngo.github.io/system-design-field-training/', cta: 'Start Training' },
   { title: 'System Design Atlas', desc: 'Walk challenges, solutions, and blockers for common scale scenarios.', href: 'https://clarkngo.github.io/sysdesign-atlas/', cta: 'View Atlas' },
+  { title: 'Py-Threat-Atlas',    desc: 'Threat models as code with OWASP pytm across traditional, cloud, AI, and agentic systems.', href: 'https://clarkngo.github.io/py-threat-atlas/', cta: 'View Atlas' },
   { title: 'Change Radar',       desc: 'Correlate alerts with recent deploys, config changes, and feature-flag flips — inspired by the change-tracking app I built features for at eBay.', href: 'https://clarkngo.github.io/change-radar/', cta: 'View Project' },
   { title: 'Paper Explained',    desc: 'Explaining complex research papers in plain language.',     href: 'https://clarkngo.github.io/paper-explained',     cta: 'View Project' },
 ];
@@ -47,6 +48,8 @@ export const learningProjects = [
   { title: 'Color Communication', desc: 'A private, in-browser assessment of your communication blend, plus practice shaping the same message for blue, green, yellow, and red preferences.', href: 'https://clarkngo.github.io/color-communication/', cta: 'View Project' },
   { title: 'Ebooks',            desc: 'Original fiction. Pick a title and read it online, no signup required.', href: 'https://clarkngo.github.io/ebooks/', cta: 'View Shelf' },
   { title: 'First Responders',  desc: 'Duty Board — a curated resource hub for fire, EMS, and police: training, wellness support, field standards, and agency directories.', href: 'https://clarkngo.github.io/first-responders/', cta: 'View Duty Board' },
+  { title: 'Project Sentinel',  desc: 'Scenario drills on police AI use — judge whether each field decision is authorized, needs escalation, or violates federal, Washington State, and Seattle policy.', href: 'https://clarkngo.github.io/project-sentinel/', cta: 'Start Training' },
+  { title: 'Thought Engine',    desc: 'Articles on AI infrastructure, agentic systems, higher education, and the architecture underneath them.', href: 'https://clarkngo.github.io/thought-engine/', cta: 'Read Articles' },
   { title: 'Wok & Talk',        desc: 'Learn restaurant Mandarin by eating your way through Chinese restaurants.', href: 'https://clarkngo.github.io/wok-and-talk/', cta: 'View Project' },
   { title: 'MathMatrix AI',     desc: 'A 10-module, AI-assisted interactive course on the math behind data science: linear algebra, calculus, probability, and optimization.', href: 'https://clarkngo.github.io/math-matrix-ai/', cta: 'View Course' },
 ];
@@ -55,6 +58,7 @@ export const hobbyProjects = [
   { title: 'Volleyball',   desc: 'A site dedicated to volleyball, my favorite sport.',  href: 'https://clarkngo.github.io/volleyball',   cta: 'View Project' },
   { title: 'Board Games',  desc: 'A personal collection and review of board games.',    href: 'https://clarkngo.github.io/board-games',  cta: 'View Project' },
   { title: 'Workouts',     desc: 'A floor reference for cable walks, plyometrics, foam rolling, explosiveness, medicine-ball hip work, and kettlebells.', href: 'https://clarkngo.github.io/workouts/', cta: 'View Project' },
+  { title: 'Wild Rift Tactics', desc: 'Wild Rift Baron lane matchups: counters, trading patterns, and laning tips.', href: 'https://clarkngo.github.io/wild-rift-tactics/', cta: 'View Matchups' },
 ];
 
 /* metadata for the bespoke themed cards on Home (hand-written JSX), used for search matching
