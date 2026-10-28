@@ -32,6 +32,7 @@ const navGroups = [
       { href: 'https://clarkngo.github.io/commands',           label: 'Commands' },
       { href: 'https://clarkngo.github.io/badges/',             label: 'Badges' },
       { href: 'https://clarkngo.github.io/vibe-coding/',        label: 'Vibe Coding' },
+      { href: 'https://clarkngo.github.io/deconstruct/',        label: 'Deconstruct' },
     ],
   },
 ];

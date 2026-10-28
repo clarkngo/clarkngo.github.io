@@ -22,6 +22,7 @@ const links = [
   { href: 'https://clarkngo.github.io/concepts/',   title: 'Concepts', desc: 'Visual-first technical guides.' },
   { href: 'https://clarkngo.github.io/commands',    title: 'Commands', desc: 'Command lookup.' },
   { href: 'https://clarkngo.github.io/badges/',     title: 'Badges',   desc: 'Digital badges and certifications.' },
+  { href: 'https://clarkngo.github.io/deconstruct/', title: 'Deconstruct', desc: 'Dense technical ideas, rebuilt from first principles in plain language.' },
 ];
 
 const asEntries = (items, group) => items.map((item) => ({ ...item, group }));
