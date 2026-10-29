@@ -32,6 +32,7 @@ export const aiToolsProjects = [
 export const systemsProjects = [
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
   { title: 'System Design Field Training', desc: 'Learn system design by living through it — 10 interactive incidents based on real postmortems from GitHub, AWS, Cloudflare, and more.', href: 'https://clarkngo.github.io/system-design-field-training/', cta: 'Start Training' },
+  { title: 'How Systems Work',   desc: 'Interactive architecture diagrams — trace each request step by step through systems like a RAG AI application.', href: 'https://clarkngo.github.io/how-systems-work/', cta: 'Explore Diagrams' },
   { title: 'System Design Atlas', desc: 'Walk challenges, solutions, and blockers for common scale scenarios.', href: 'https://clarkngo.github.io/sysdesign-atlas/', cta: 'View Atlas' },
   { title: 'Py-Threat-Atlas',    desc: 'Threat models as code with OWASP pytm across traditional, cloud, AI, and agentic systems.', href: 'https://clarkngo.github.io/py-threat-atlas/', cta: 'View Atlas' },
   { title: 'Change Radar',       desc: 'Correlate alerts with recent deploys, config changes, and feature-flag flips — inspired by the change-tracking app I built features for at eBay.', href: 'https://clarkngo.github.io/change-radar/', cta: 'View Project' },
