@@ -12,6 +12,12 @@ export const featuredProjects = [
     href: 'https://clarkngo.github.io/cityu-contributions/',
     cta: 'View Contributions',
   },
+  {
+    title: 'Skill Tree',
+    desc: 'Everything I know, laid out like a JRPG skill tree: realms, ranks, EXP, and prerequisites across software, AI, security, research, teaching, business, and life.',
+    href: 'https://clarkngo.github.io/skill-tree/',
+    cta: 'Open the Skill Tree',
+  },
 ];
 
 export const aiToolsProjects = [
