@@ -63,6 +63,7 @@ export const learningProjects = [
 
 export const hobbyProjects = [
   { title: 'Volleyball',   desc: 'A site dedicated to volleyball, my favorite sport.',  href: 'https://clarkngo.github.io/volleyball',   cta: 'View Project' },
+  { title: 'Volleyball CV Lab', desc: 'Research notes for a volleyball computer vision project: ball tracking, line calls, and what an ordinary camera can measure.', href: 'https://clarkngo.github.io/volleyball-cv-lab/', cta: 'View Notes' },
   { title: 'Board Games',  desc: 'A personal collection and review of board games.',    href: 'https://clarkngo.github.io/board-games',  cta: 'View Project' },
   { title: 'Workouts',     desc: 'A floor reference for cable walks, plyometrics, foam rolling, explosiveness, medicine-ball hip work, and kettlebells.', href: 'https://clarkngo.github.io/workouts/', cta: 'View Project' },
   { title: 'Wild Rift Tactics', desc: 'Wild Rift Baron lane matchups: counters, trading patterns, and laning tips.', href: 'https://clarkngo.github.io/wild-rift-tactics/', cta: 'View Matchups' },
