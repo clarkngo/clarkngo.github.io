@@ -41,6 +41,7 @@ export const systemsProjects = [
   { title: 'How Systems Work',   desc: 'Interactive architecture diagrams — trace each request step by step through systems like a RAG AI application.', href: 'https://clarkngo.github.io/how-systems-work/', cta: 'Explore Diagrams' },
   { title: 'System Design Atlas', desc: 'Walk challenges, solutions, and blockers for common scale scenarios.', href: 'https://clarkngo.github.io/sysdesign-atlas/', cta: 'View Atlas' },
   { title: 'Py-Threat-Atlas',    desc: 'Threat models as code with OWASP pytm across traditional, cloud, AI, and agentic systems.', href: 'https://clarkngo.github.io/py-threat-atlas/', cta: 'View Atlas' },
+  { title: 'Cauldron Control', desc: 'A browser game that teaches operational technology (OT) security through potion brewing.', href: 'https://clarkngo.github.io/cauldron-control/', cta: 'Play the Game' },
   { title: 'Change Radar',       desc: 'Correlate alerts with recent deploys, config changes, and feature-flag flips — inspired by the change-tracking app I built features for at eBay.', href: 'https://clarkngo.github.io/change-radar/', cta: 'View Project' },
   { title: 'Paper Explained',    desc: 'Explaining complex research papers in plain language.',     href: 'https://clarkngo.github.io/paper-explained',     cta: 'View Project' },
 ];
