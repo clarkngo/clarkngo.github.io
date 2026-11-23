@@ -38,6 +38,7 @@ export const aiToolsProjects = [
 export const systemsProjects = [
   { title: 'Microservices',      desc: 'Exploring the world of microservices architecture.',        href: 'https://clarkngo.github.io/microservices',       cta: 'View Project' },
   { title: 'System Design Field Training', desc: 'Learn system design by living through it — 10 interactive incidents based on real postmortems from GitHub, AWS, Cloudflare, and more.', href: 'https://clarkngo.github.io/system-design-field-training/', cta: 'Start Training' },
+  { title: 'Tells',              desc: 'Pattern recognition for tech interviews: train the first 30 seconds of a DSA or system design problem — spot the tell, name the pattern.', href: 'https://clarkngo.github.io/tells/', cta: 'Start Drilling' },
   { title: 'How Systems Work',   desc: 'Interactive architecture diagrams — trace each request step by step through systems like a RAG AI application.', href: 'https://clarkngo.github.io/how-systems-work/', cta: 'Explore Diagrams' },
   { title: 'System Design Atlas', desc: 'Walk challenges, solutions, and blockers for common scale scenarios.', href: 'https://clarkngo.github.io/sysdesign-atlas/', cta: 'View Atlas' },
   { title: 'Cauldron Control',   desc: 'A browser game that teaches operational technology (OT) security through potion brewing: the dashboard is a view, not the truth.', href: 'https://clarkngo.github.io/cauldron-control/', cta: 'Play Game' },
