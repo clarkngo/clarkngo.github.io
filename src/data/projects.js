@@ -40,6 +40,7 @@ export const systemsProjects = [
   { title: 'System Design Field Training', desc: 'Learn system design by living through it — 10 interactive incidents based on real postmortems from GitHub, AWS, Cloudflare, and more.', href: 'https://clarkngo.github.io/system-design-field-training/', cta: 'Start Training' },
   { title: 'How Systems Work',   desc: 'Interactive architecture diagrams — trace each request step by step through systems like a RAG AI application.', href: 'https://clarkngo.github.io/how-systems-work/', cta: 'Explore Diagrams' },
   { title: 'System Design Atlas', desc: 'Walk challenges, solutions, and blockers for common scale scenarios.', href: 'https://clarkngo.github.io/sysdesign-atlas/', cta: 'View Atlas' },
+  { title: 'Cauldron Control',   desc: 'A browser game that teaches operational technology (OT) security through potion brewing: the dashboard is a view, not the truth.', href: 'https://clarkngo.github.io/cauldron-control/', cta: 'Play Game' },
   { title: 'Py-Threat-Atlas',    desc: 'Threat models as code with OWASP pytm across traditional, cloud, AI, and agentic systems.', href: 'https://clarkngo.github.io/py-threat-atlas/', cta: 'View Atlas' },
   { title: 'Change Radar',       desc: 'Correlate alerts with recent deploys, config changes, and feature-flag flips — inspired by the change-tracking app I built features for at eBay.', href: 'https://clarkngo.github.io/change-radar/', cta: 'View Project' },
   { title: 'Paper Explained',    desc: 'Explaining complex research papers in plain language.',     href: 'https://clarkngo.github.io/paper-explained',     cta: 'View Project' },
@@ -59,6 +60,7 @@ export const learningProjects = [
   { title: 'Thought Engine',    desc: 'Articles on AI infrastructure, agentic systems, higher education, and the architecture underneath them.', href: 'https://clarkngo.github.io/thought-engine/', cta: 'Read Articles' },
   { title: 'Wok & Talk',        desc: 'Learn restaurant Mandarin by eating your way through Chinese restaurants.', href: 'https://clarkngo.github.io/wok-and-talk/', cta: 'View Project' },
   { title: 'MathMatrix AI',     desc: 'A 10-module, AI-assisted interactive course on the math behind data science: linear algebra, calculus, probability, and optimization.', href: 'https://clarkngo.github.io/math-matrix-ai/', cta: 'View Course' },
+  { title: 'Volleyball CV Lab', desc: 'Research notes for a volleyball computer vision project: meetings, candidate rules, vision models, and datasets.', href: 'https://clarkngo.github.io/volleyball-cv-lab/', cta: 'Read Notes' },
 ];
 
 export const hobbyProjects = [
