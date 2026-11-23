@@ -275,6 +275,26 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* Icon-only music toggle (reuses .searchButton look) */
+.musicButton {
+  padding: 0.55rem;
+}
+
+.footerCredit {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footerCredit a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: underline;
+}
+
+.footerCredit a:hover {
+  color: #fff;
+}
+
 /* ─── Mobile ─── */
 @media (max-width: 860px) {
   .hamburger {
