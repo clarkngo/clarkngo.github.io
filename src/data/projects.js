@@ -62,6 +62,7 @@ export const learningProjects = [
   { title: 'Wok & Talk',        desc: 'Learn restaurant Mandarin by eating your way through Chinese restaurants.', href: 'https://clarkngo.github.io/wok-and-talk/', cta: 'View Project' },
   { title: 'MathMatrix AI',     desc: 'A 10-module, AI-assisted interactive course on the math behind data science: linear algebra, calculus, probability, and optimization.', href: 'https://clarkngo.github.io/math-matrix-ai/', cta: 'View Course' },
   { title: 'Volleyball CV Lab', desc: 'Research notes for a volleyball computer vision project: meetings, candidate rules, vision models, and datasets.', href: 'https://clarkngo.github.io/volleyball-cv-lab/', cta: 'Read Notes' },
+  { title: 'Orbit',             desc: 'A learning map where topics are suns and subtopics orbit them. Master a node to light the path outward.', href: 'https://clarkngo.github.io/orbit/', cta: 'Explore the Map' },
 ];
 
 export const hobbyProjects = [
