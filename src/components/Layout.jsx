@@ -3,6 +3,7 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
 import styles from './Layout.module.css';
 import logo from '../assets/mechanized_flame_wolf_head.png';
 import SpotlightSearch from './SpotlightSearch';
+import MusicToggle from './MusicToggle';
 
 /* Single top-level links stay flat; everything else is grouped into a dropdown
    so the nav doesn't sprawl across 13 items. */
@@ -169,6 +170,8 @@ const Layout = () => {
             <kbd>{isMac ? '⌘K' : 'Ctrl K'}</kbd>
           </button>
 
+          <MusicToggle />
+
           <button
             className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ''}`}
             onClick={() => setMenuOpen(v => !v)}
@@ -192,6 +195,12 @@ const Layout = () => {
           <p className={styles.footerLogo}>Clark Ngo</p>
           <p className={styles.footerTagline}>Software Architect &amp; AI Engineer</p>
           <p className={styles.footerCopy}>&copy; {new Date().getFullYear()} Clark Ngo. All Rights Reserved.</p>
+          <p className={styles.footerCredit}>
+            Music by{' '}
+            <a href="https://pixabay.com/users/leberch-42823964/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=626822" target="_blank" rel="noopener noreferrer">Nikita Kondrashev</a>
+            {' '}from{' '}
+            <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=626822" target="_blank" rel="noopener noreferrer">Pixabay</a>
+          </p>
         </div>
       </footer>
     </div>
